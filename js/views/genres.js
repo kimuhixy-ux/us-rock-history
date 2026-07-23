@@ -11,6 +11,7 @@ const POSITIONS = {
   "surf-garage-rock": { x: 270, y: 60 },
   "psychedelic-rock": { x: 270, y: 190 },
   "southern-rock": { x: 270, y: 450 },
+  "singer-songwriter": { x: 270, y: 320 },
   "proto-punk": { x: 450, y: 60 },
   "arena-hard-rock": { x: 450, y: 190 },
   "glam-metal": { x: 450, y: 320 },
