@@ -92,11 +92,8 @@ export async function renderArtists(view, queryString) {
 
     countEl.textContent = `${list.length}件ヒット`;
     resultsEl.innerHTML = list.length
-      ? list.slice(0, 200).map((a) => artistCardHtml(a)).join("")
+      ? list.map((a) => artistCardHtml(a)).join("")
       : `<p class="empty-hint">該当するアーティストが見つかりませんでした。</p>`;
-    if (list.length > 200) {
-      countEl.textContent += `(先頭200件のみ表示。絞り込みを追加してください)`;
-    }
     syncUrl();
   }
 
