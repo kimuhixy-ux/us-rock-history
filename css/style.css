@@ -278,6 +278,55 @@ input[type="text"]:focus, input[type="search"]:focus, select:focus {
   font-size: 13px;
   margin: 6px 0 14px;
 }
+.personnel-section {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border);
+}
+.personnel-section .section-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.personnel-section .section-hint {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin: 0 0 12px;
+}
+.album-hit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+a.album-row.personnel-hit {
+  text-decoration: none;
+  color: inherit;
+  border-left: 3px solid var(--accent2);
+}
+a.album-row.personnel-hit:hover {
+  border-color: var(--accent2);
+}
+.personnel-hit .hit-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent2);
+  background: rgba(92, 200, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.personnel-hit .album-artist {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+.personnel-hit .personnel-snippet {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
 
 /* ===== アーティスト詳細 ===== */
 .detail-header h1 {
