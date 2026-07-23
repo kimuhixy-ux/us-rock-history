@@ -109,6 +109,12 @@
       "description": "2000年代、60年代ガレージロックの荒々しさを再解釈したリバイバル・ムーブメント。"
     },
     {
+      "id": "pop-rnb",
+      "label": "ポップス / ソウル・R&B",
+      "period": "1960s〜",
+      "description": "ソウル・ファンクを土台に、モータウンからディスコ、コンテンポラリーR&Bまで続くポップミュージックの潮流。"
+    },
+    {
       "id": "other",
       "label": "その他(ルーツロック、アメリカーナ等)",
       "period": "",
@@ -243,6 +249,20 @@
     "yacht rock": ["other"],
     "soft rock": ["other"],
     "art rock": ["other"],
-    "blue-eyed soul": ["other"]
+    "blue-eyed soul": ["other"],
+
+    "r&b": ["pop-rnb"],
+    "rnb": ["pop-rnb"],
+    "funk": ["pop-rnb"],
+    "soul": ["pop-rnb"],
+    "contemporary r&b": ["pop-rnb"],
+    "neo soul": ["pop-rnb"],
+    "neo-soul": ["pop-rnb"],
+    "pop soul": ["pop-rnb"],
+    "dance-pop": ["pop-rnb"],
+    "hip hop soul": ["pop-rnb"],
+    "trap soul": ["pop-rnb"],
+    "alternative r&b": ["pop-rnb"],
+    "adult contemporary r&b": ["pop-rnb"]
   }
 }

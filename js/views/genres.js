@@ -25,6 +25,7 @@ const POSITIONS = {
   "alternative-rock": { x: 990, y: 320 },
   "garage-indie-revival": { x: 990, y: 450 },
   "other": { x: 90, y: 600 },
+  "pop-rnb": { x: 270, y: 600 },
 };
 
 const NODE_W = 160;
