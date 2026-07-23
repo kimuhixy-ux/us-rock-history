@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# 各種fetchスクリプトの再開用チェックポイント(アプリの動作には不要)
+data/progress.json
+data/backfill_progress.json
+data/artwork_progress.json
+data/personnel_progress.json
+data/lineup_progress.json
+
+# macOS
+.DS_Store
+
+# ログ
+*.log
+
+# Spotify APIの認証情報(絶対にコミットしない)
+spotify_credentials.json
+.env

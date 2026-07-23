@@ -1,0 +1,420 @@
+/* ===== 基本設定 ===== */
+:root {
+  --bg: #0e0e12;
+  --bg-elevated: #17171d;
+  --bg-card: #1c1c24;
+  --border: #2a2a34;
+  --text: #eceef2;
+  --text-dim: #9a9aa8;
+  --accent: #ff5c72;
+  --accent-dim: #ff5c7233;
+  --accent2: #5cc8ff;
+  --font: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", Meiryo, sans-serif;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+a {
+  color: var(--accent2);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+img, svg { max-width: 100%; }
+
+/* ===== ヘッダー / ナビ ===== */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(12px + env(safe-area-inset-top)) 16px 12px;
+  background: rgba(14, 14, 18, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  font-size: 15px;
+  color: var(--text);
+}
+.brand:hover { text-decoration: none; color: var(--accent); }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 36px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.main-nav a {
+  color: var(--text-dim);
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.main-nav a:hover, .main-nav a.active {
+  color: var(--text);
+  background: var(--bg-card);
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle { display: flex; }
+  .main-nav {
+    position: fixed;
+    top: calc(57px + env(safe-area-inset-top));
+    left: 0;
+    right: 0;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 8px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+    display: none;
+    max-height: calc(100vh - 57px - env(safe-area-inset-top));
+    overflow-y: auto;
+  }
+  .main-nav.open { display: flex; }
+  .main-nav a { padding: 12px; font-size: 15px; }
+}
+
+/* ===== メインビュー ===== */
+.view {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+  min-height: 70vh;
+}
+
+.loading, .empty-state {
+  text-align: center;
+  color: var(--text-dim);
+  padding: 60px 16px;
+}
+
+.app-footer {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+  padding: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* ===== 共通コンポーネント ===== */
+.page-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.page-lead {
+  color: var(--text-dim);
+  font-size: 14px;
+  margin: 0 0 20px;
+  line-height: 1.7;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+.chip.active {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+button.chip { cursor: pointer; font-family: inherit; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+}
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #1a0006; font-weight: 700; }
+.btn.fav.is-active { color: var(--accent); border-color: var(--accent); }
+
+input[type="text"], input[type="search"], select {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 14px;
+}
+input[type="text"]:focus, input[type="search"]:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ===== 年表ビュー ===== */
+.decade-block {
+  margin-bottom: 36px;
+}
+.decade-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.decade-year {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.decade-desc {
+  color: var(--text-dim);
+  font-size: 13.5px;
+  line-height: 1.8;
+  margin: 0 0 14px;
+}
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+/* ===== アーティストカード ===== */
+.artist-card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  color: var(--text);
+}
+.artist-card:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.artist-card .name {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.artist-card .meta {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* ===== 一覧ページ ===== */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.filter-bar input[type="search"] { flex: 1 1 220px; }
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.result-count {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin: 6px 0 14px;
+}
+
+/* ===== アーティスト詳細 ===== */
+.detail-header h1 {
+  font-size: 24px;
+  margin: 0 0 6px;
+}
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.discography {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.album-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+.album-artwork {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--bg-elevated);
+}
+.album-artwork-placeholder {
+  border: 1px solid var(--border);
+}
+.album-info { flex: 1; min-width: 120px; }
+.album-row .album-title { font-weight: 600; font-size: 14px; }
+.album-row .album-year { color: var(--text-dim); font-size: 12px; margin-left: 8px; }
+.album-links { display: flex; gap: 8px; }
+.album-links a {
+  font-size: 12px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+.album-links a:hover { color: var(--text); border-color: var(--accent); text-decoration: none; }
+
+/* ===== ジャンル系統図 ===== */
+.genealogy-wrap {
+  overflow-x: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.genre-node rect {
+  fill: var(--bg-elevated);
+  stroke: var(--border);
+  rx: 8;
+}
+.genre-node text {
+  fill: var(--text);
+  font-size: 11px;
+  font-family: var(--font);
+}
+.genre-node { cursor: pointer; }
+.genre-node:hover rect { stroke: var(--accent); }
+.genealogy-wrap .edge {
+  stroke: var(--text-dim);
+  stroke-width: 1.4;
+  fill: none;
+  marker-end: url(#arrow);
+}
+
+/* ===== 相関図 ===== */
+.relations-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.relations-wrap svg { display: block; width: 100%; height: 560px; touch-action: none; }
+.rel-link { stroke: var(--border); stroke-width: 1.2; }
+.rel-node circle { stroke: var(--bg); stroke-width: 1.5; }
+.rel-node.group circle { fill: var(--accent); }
+.rel-node.person circle { fill: var(--accent2); }
+.rel-node text { fill: var(--text); font-size: 10px; pointer-events: none; }
+.rel-legend { display: flex; gap: 16px; padding: 10px 16px; font-size: 12px; color: var(--text-dim); border-top: 1px solid var(--border); }
+.rel-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.dot.group { background: var(--accent); }
+.dot.person { background: var(--accent2); }
+
+/* ===== 名盤ガイド / 用語集 ===== */
+.guide-genre { margin-bottom: 32px; }
+.guide-genre h2 { font-size: 17px; margin-bottom: 4px; }
+.guide-genre .genre-desc { color: var(--text-dim); font-size: 13px; margin-bottom: 12px; }
+.album-pick {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+.album-pick .title { font-weight: 700; font-size: 14px; }
+.album-pick .artist { color: var(--text-dim); font-size: 12px; margin-bottom: 6px; }
+.album-pick .note { font-size: 13px; line-height: 1.7; }
+
+.glossary-item {
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+.glossary-item dt { font-weight: 700; margin-bottom: 4px; }
+.glossary-item dd { margin: 0; color: var(--text-dim); font-size: 13.5px; line-height: 1.8; }
+
+/* ===== 統計 ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.stat-card h3 { margin: 0 0 12px; font-size: 14px; color: var(--text-dim); }
+.bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.bar-label { width: 130px; font-size: 12px; color: var(--text-dim); flex-shrink: 0; text-align: right; }
+.bar-track { flex: 1; background: var(--bg-elevated); border-radius: 6px; overflow: hidden; height: 16px; }
+.bar-fill { background: var(--accent); height: 100%; }
+.bar-value { font-size: 12px; color: var(--text-dim); width: 32px; }
+
+/* ===== お気に入り ===== */
+.empty-hint { color: var(--text-dim); font-size: 14px; }

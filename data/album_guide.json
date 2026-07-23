@@ -1,0 +1,110 @@
+{
+  "rock-and-roll": [
+    { "artist": "Elvis Presley", "album": "Elvis Presley", "year": 1956, "note": "サン・スタジオでの録音を核に据えたデビュー作。R&Bとカントリーを地続きにした「ロックンロール」の誕生を告げる一枚。" },
+    { "artist": "Chuck Berry", "album": "After School Session", "year": 1957, "note": "「Johnny B. Goode」のギターリフに象徴される、ロックンロールのギター語法をほぼ独力で作り上げたアルバム。" },
+    { "artist": "Little Richard", "album": "Here's Little Richard", "year": 1957, "note": "絶叫するヴォーカルと疾走するピアノで、ロックンロールの狂騒的なエネルギーを提示したデビュー作。" },
+    { "artist": "Buddy Holly", "album": "The \"Chirping\" Crickets", "year": 1957, "note": "自作自演のシンガーソングライター像を早くも確立し、後のロックバンドの編成の雛形を作った一枚。" }
+  ],
+  "folk-rock": [
+    { "artist": "Bob Dylan", "album": "Bringing It All Back Home", "year": 1965, "note": "アコースティックとエレクトリックが同居する過渡期の一枚。フォークシーンに衝撃を与え、フォークロックの扉を開いた。" },
+    { "artist": "The Byrds", "album": "Mr. Tambourine Man", "year": 1965, "note": "ディランのカヴァーを12弦ギターの煌めくアルペジオで再構築し、フォークロックというジャンル名を決定づけたデビュー作。" },
+    { "artist": "Simon & Garfunkel", "album": "Bridge over Troubled Water", "year": 1970, "note": "繊細なハーモニーとオーケストレーションを極めた、フォークロック的美意識の到達点。" },
+    { "artist": "Bob Dylan", "album": "Blonde on Blonde", "year": 1966, "note": "ナッシュビルのスタジオ・ミュージシャンと制作したロック三部作の集大成。詩的な歌詞とバンドサウンドが高い次元で結晶化した。" }
+  ],
+  "surf-garage-rock": [
+    { "artist": "The Beach Boys", "album": "Pet Sounds", "year": 1966, "note": "サーフミュージックの陽性なイメージから離れ、精緻なアレンジと内省的な歌詞で「アルバム」の可能性を切り開いた金字塔。" },
+    { "artist": "The Beach Boys", "album": "Surfin' U.S.A.", "year": 1963, "note": "西海岸のサーフカルチャーとホットロッドの快楽をそのままポップソングに変換した、初期の代表作。" },
+    { "artist": "The Velvet Underground", "album": "The Velvet Underground & Nico", "year": 1967, "note": "アンディ・ウォーホル制作。ドラッグや倒錯をテーマにした歌詞と実験的なノイズで、ガレージ/アートロックの原型を提示した。" },
+    { "artist": "? and the Mysterians", "album": "96 Tears", "year": 1966, "note": "オルガンのリフが印象的な、ガレージロックの粗削りな衝動を凝縮したシングル主体のデビュー作。" }
+  ],
+  "psychedelic-rock": [
+    { "artist": "The Doors", "album": "The Doors", "year": 1967, "note": "「The End」に象徴される暗く儀式的な世界観と、ジム・モリソンのカリスマ性が凝縮されたデビュー作。" },
+    { "artist": "Jimi Hendrix", "album": "Are You Experienced", "year": 1967, "note": "ギターという楽器そのものの概念を塗り替えた革命的デビュー作。ブルースをサイケデリアへ拡張した。" },
+    { "artist": "Jefferson Airplane", "album": "Surrealistic Pillow", "year": 1967, "note": "「White Rabbit」を含む、サンフランシスコのカウンターカルチャーを象徴するアルバム。" },
+    { "artist": "Grateful Dead", "album": "American Beauty", "year": 1970, "note": "サイケデリックな即興性を保ちながら、フォーク/カントリー的な叙情性へ接近した名盤。" }
+  ],
+  "southern-rock": [
+    { "artist": "The Allman Brothers Band", "album": "At Fillmore East", "year": 1971, "note": "ツインギターと即興演奏の応酬を収めたライブ盤。サザンロックの生命線であるグルーヴ感を完璧に捉えた金字塔。" },
+    { "artist": "Lynyrd Skynyrd", "album": "(Pronounced 'Lĕh-'nérd 'Skin-'nérd)", "year": 1973, "note": "「Free Bird」を収録したデビュー作。泥臭いギターと南部特有の誇りに満ちた歌詞が同居する。" },
+    { "artist": "ZZ Top", "album": "Tres Hombres", "year": 1973, "note": "テキサス出身らしいブルースの質感とユーモアを併せ持つ、初期ZZトップの代表作。" },
+    { "artist": "The Allman Brothers Band", "album": "Eat a Peach", "year": 1972, "note": "デュアン・オールマン急逝後にリリースされた、スタジオとライブ音源を組み合わせた意欲作。" }
+  ],
+  "arena-hard-rock": [
+    { "artist": "Aerosmith", "album": "Toys in the Attic", "year": 1975, "note": "ブルースロックの質感とアメリカンな享楽性を両立させた、エアロスミス初期の代表作。" },
+    { "artist": "Kiss", "album": "Alive!", "year": 1975, "note": "派手なメイクとパフォーマンスをそのまま音に定着させたライブ盤。アリーナロックの興奮を伝える一枚。" },
+    { "artist": "Boston", "album": "Boston", "year": 1976, "note": "分厚く磨き上げられたギターサウンドで、アリーナロックのプロダクション基準を作ったデビュー作。" },
+    { "artist": "Alice Cooper", "album": "Billion Dollar Babies", "year": 1973, "note": "ホラー的な演出とポップなロックソングを融合させた、ショックロックの代表作。" },
+    { "artist": "Van Halen", "album": "Van Halen", "year": 1978, "note": "エディ・ヴァン・ヘイレンの革新的なギタープレイと享楽的なロックンロールが同居するデビュー作。" }
+  ],
+  "proto-punk": [
+    { "artist": "The Stooges", "album": "Raw Power", "year": 1973, "note": "イギー・ポップの衝動的なパフォーマンスと、剥き出しのギターサウンド。パンクロック誕生前夜を象徴する一枚。" },
+    { "artist": "MC5", "album": "Kick Out the Jams", "year": 1969, "note": "デトロイトのライブハウスで録音された、政治的な過激さと爆発的な演奏が渦巻くライブアルバム。" },
+    { "artist": "New York Dolls", "album": "New York Dolls", "year": 1973, "note": "女装めいた過剰なグラム的スタイルと、荒削りなロックンロールを融合させたデビュー作。後のパンクに直接的な影響を残した。" }
+  ],
+  "punk-rock": [
+    { "artist": "Ramones", "album": "Ramones", "year": 1976, "note": "全曲2分台、装飾を削ぎ落としたシンプルな構成で、アメリカン・パンクの原型を作ったデビュー作。" },
+    { "artist": "Patti Smith", "album": "Horses", "year": 1975, "note": "詩の朗読とロックンロールを融合させた、CBGBシーンを代表する知的なパンク作品。" },
+    { "artist": "Television", "album": "Marquee Moon", "year": 1977, "note": "パンクの衝動を保ちながら、複雑なギターインタープレイを展開した異色の一枚。アートパンクの金字塔。" },
+    { "artist": "Dead Kennedys", "album": "Fresh Fruit for Rotting Vegetables", "year": 1980, "note": "西海岸パンクの過激さと風刺的な政治性を兼ね備えた、代表的なデビュー作。" }
+  ],
+  "new-wave": [
+    { "artist": "Talking Heads", "album": "Remain in Light", "year": 1980, "note": "アフロビートの要素を大胆に取り込み、ニューウェイヴをより実験的で高揚感あるダンスミュージックへ発展させた作品。" },
+    { "artist": "Blondie", "album": "Parallel Lines", "year": 1978, "note": "パンクのエネルギーとポップな歌心、ディスコのビートを融合させ、商業的成功も収めた代表作。" },
+    { "artist": "Talking Heads", "album": "Talking Heads: 77", "year": 1977, "note": "神経質でぎこちないファンクとポップソングが同居するデビュー作。ニューウェイヴの知的な側面を切り開いた。" },
+    { "artist": "The Cars", "album": "The Cars", "year": 1978, "note": "パワーポップとシンセサイザーを融合させた、洗練されたアメリカン・ニューウェイヴのデビュー作。" }
+  ],
+  "hardcore-punk": [
+    { "artist": "Black Flag", "album": "Damaged", "year": 1981, "note": "ヘンリー・ロリンズ加入後の初アルバム。荒々しく重量感あるギターで、ハードコアパンクの基準を作った金字塔。" },
+    { "artist": "Minor Threat", "album": "Complete Discography", "year": 1989, "note": "ストレート・エッジ文化を生んだワシントンD.C.のバンドの全音源集。短く鋭い楽曲群がハードコアの美学を凝縮する。" },
+    { "artist": "Bad Brains", "album": "Bad Brains", "year": 1982, "note": "レゲエとハードコアパンクを高速で行き来する、驚異的な演奏力を誇るデビュー作。" },
+    { "artist": "Hüsker Dü", "album": "Zen Arcade", "year": 1984, "note": "ハードコアの速度感を保ちながらメロディと実験性を大胆に取り込んだ、二枚組の野心作。" }
+  ],
+  "college-rock-indie": [
+    { "artist": "R.E.M.", "album": "Murmur", "year": 1983, "note": "曖昧な発音のヴォーカルと煌めくジャングリー・ギターで、カレッジロックの美学を確立したデビュー作。" },
+    { "artist": "Pixies", "album": "Doolittle", "year": 1989, "note": "静と動の激しい落差(ラウド/クワイエット構造)で、90年代オルタナティブロックに絶大な影響を与えた一枚。" },
+    { "artist": "Sonic Youth", "album": "Daydream Nation", "year": 1988, "note": "変則チューニングとノイズを駆使しながらポップな瞬間も併せ持つ、ノイズロックの金字塔的二枚組。" },
+    { "artist": "The Replacements", "album": "Let It Be", "year": 1984, "note": "パンクの荒さとパワーポップ的な歌心を同居させた、80年代アメリカン・インディーの重要作。" }
+  ],
+  "glam-metal": [
+    { "artist": "Mötley Crüe", "album": "Shout at the Devil", "year": 1983, "note": "サンセット・ストリップの享楽と危険な魅力を凝縮した、ヘアメタル・ムーブメントを象徴する一枚。" },
+    { "artist": "Guns N' Roses", "album": "Appetite for Destruction", "year": 1987, "note": "ロサンゼルスのストリートの荒々しさとポップなメロディを両立させ、ヘアメタル時代の頂点を築いたデビュー作。" },
+    { "artist": "Van Halen", "album": "1984", "year": 1984, "note": "シンセサイザーを大胆に導入しつつも圧倒的なギターの存在感を保った、グラムメタル期の代表作。" },
+    { "artist": "Poison", "album": "Look What the Cat Dragged In", "year": 1986, "note": "派手なメイクとキャッチーなコーラスで、ヘアメタルの商業的絶頂期を象徴するデビュー作。" }
+  ],
+  "heavy-metal": [
+    { "artist": "Metallica", "album": "Master of Puppets", "year": 1986, "note": "複雑な曲構成と圧倒的な疾走感を両立させた、スラッシュメタルの金字塔とされる作品。" },
+    { "artist": "Megadeth", "album": "Rust in Peace", "year": 1990, "note": "超絶技巧のツインギターと緻密な曲構成で、スラッシュメタルの技術的到達点を示した作品。" },
+    { "artist": "Slayer", "album": "Reign in Blood", "year": 1986, "note": "圧倒的な速度と暴力性を凝縮した29分。デスメタル誕生にも影響を与えた過激な金字塔。" },
+    { "artist": "Pantera", "album": "Vulgar Display of Power", "year": 1992, "note": "グルーヴメタルの原型を作った重量級の一枚。攻撃性とタイトなリズムが同居する。" }
+  ],
+  "grunge": [
+    { "artist": "Nirvana", "album": "Nevermind", "year": 1991, "note": "「Smells Like Teen Spirit」を含み、グランジをメインストリームへ押し上げた歴史的な一枚。" },
+    { "artist": "Pearl Jam", "album": "Ten", "year": 1991, "note": "アリーナロック的なスケール感とグランジの内省性を融合させた、パール・ジャムのデビュー作。" },
+    { "artist": "Soundgarden", "album": "Superunknown", "year": 1994, "note": "ヘヴィメタル的な重さとサイケデリックな要素を融合させ、グランジの音楽的な幅を示した代表作。" },
+    { "artist": "Alice in Chains", "album": "Dirt", "year": 1992, "note": "薬物依存というテーマを重く陰鬱なサウンドで描いた、グランジ屈指の陰影に満ちた作品。" }
+  ],
+  "alternative-rock": [
+    { "artist": "Red Hot Chili Peppers", "album": "Blood Sugar Sex Magik", "year": 1991, "note": "ファンクとロックを融合させたバンドの個性が、内省的な曲も含めて最も豊かに開花した一枚。" },
+    { "artist": "Foo Fighters", "album": "The Colour and the Shape", "year": 1997, "note": "ニルヴァーナ解散後、デイヴ・グロールがバンド編成で本格的に取り組んだ、メロディアスなオルタナティブロックの代表作。" },
+    { "artist": "Smashing Pumpkins", "album": "Siamese Dream", "year": 1993, "note": "分厚く重層的なギターサウンドと壮大な曲構成で、90年代オルタナティブロックの一つの頂点を示した作品。" },
+    { "artist": "Weezer", "album": "Weezer (Blue Album)", "year": 1994, "note": "パワーポップ的な親しみやすさとオタク的な内省を組み合わせた、90年代オルタナティブの人気作。" }
+  ],
+  "pop-punk-emo": [
+    { "artist": "Green Day", "album": "Dookie", "year": 1994, "note": "ハードコアパンクの速度感をポップなメロディに落とし込み、ポップパンクを世界的ジャンルへ押し上げた一枚。" },
+    { "artist": "My Chemical Romance", "album": "The Black Parade", "year": 2006, "note": "コンセプトアルバムとしての構築美とエモの感情的な激しさを両立させた、2000年代エモの金字塔。" },
+    { "artist": "Green Day", "album": "American Idiot", "year": 2004, "note": "パンクロック・オペラという形式で政治的な怒りを描いた、バンドの再ブレイクを決定づけた大作。" },
+    { "artist": "Jimmy Eat World", "album": "Bleed American", "year": 2001, "note": "エモの内省性とパワーポップの高揚感を融合させ、エモをメインストリームへ橋渡しした重要作。" }
+  ],
+  "garage-indie-revival": [
+    { "artist": "The Strokes", "album": "Is This It", "year": 2001, "note": "60年代ガレージロックの荒っぽさをニューヨークの都会的な感性で再構築し、2000年代ロックリバイバルの起点となった作品。" },
+    { "artist": "The White Stripes", "album": "Elephant", "year": 2003, "note": "ギターとドラムのみという最小編成で、ブルースとガレージロックの原始的なパワーを最大限に引き出した一枚。" },
+    { "artist": "The White Stripes", "album": "White Blood Cells", "year": 2001, "note": "ロウファイなプロダクションと衝動的な演奏で、ガレージロック・リバイバルの気運を先導したブレイク作。" },
+    { "artist": "Kings of Leon", "album": "Youth and Young Manhood", "year": 2003, "note": "サザンロックの血脈を継ぎながら、荒々しいガレージロック的衝動で鳴らした南部出身バンドのデビュー作。" }
+  ],
+  "other": [
+    { "artist": "Steely Dan", "album": "Aja", "year": 1977, "note": "ジャズの高度な語法をロック/ポップの文脈に落とし込んだ、スタジオワークの極致とも言える一枚。" },
+    { "artist": "Wilco", "album": "Yankee Hotel Foxtrot", "year": 2002, "note": "アメリカーナの語法と実験的な音響処理を融合させた、2000年代を代表するルーツロックの傑作。" },
+    { "artist": "Eagles", "album": "Hotel California", "year": 1976, "note": "カントリーロックの叙情性とアリーナロック的なスケール感を両立させた、アメリカを代表するロックアルバム。" },
+    { "artist": "Tom Petty and the Heartbreakers", "album": "Damn the Torpedoes", "year": 1979, "note": "ルーツロックの質実剛健さとパワーポップ的な歌心を兼ね備えた、トム・ペティの代表作。" }
+  ]
+}

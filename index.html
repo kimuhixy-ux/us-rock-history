@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e0e12">
+<title>US Rock History</title>
+<meta name="description" content="アメリカロックシーンの歴史を辿れるアプリ">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="US Rock History">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <header class="app-header">
+    <a class="brand" href="#/timeline">US ROCK HISTORY</a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#/timeline">年表</a>
+      <a href="#/artists">アーティスト一覧</a>
+      <a href="#/genres">ジャンル系統図</a>
+      <a href="#/relations">相関図</a>
+      <a href="#/guide">名盤ガイド</a>
+      <a href="#/glossary">用語集</a>
+      <a href="#/favorites">お気に入り</a>
+      <a href="#/stats">統計</a>
+    </nav>
+  </header>
+
+  <main id="view" class="view">
+    <div class="loading">読み込み中…</div>
+  </main>
+
+  <footer class="app-footer">
+    <p>データ出典: MusicBrainz。楽曲再生はSpotify / Apple Musicへリンクします。</p>
+  </footer>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

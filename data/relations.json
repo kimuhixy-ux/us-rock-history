@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    { "id": "the-byrds", "name": "The Byrds", "type": "group" },
+    { "id": "crosby-stills-nash-young", "name": "Crosby, Stills, Nash & Young", "type": "group" },
+    { "id": "buffalo-springfield", "name": "Buffalo Springfield", "type": "group" },
+    { "id": "david-crosby", "name": "David Crosby", "type": "person" },
+    { "id": "neil-young", "name": "Neil Young", "type": "person" },
+    { "id": "stephen-stills", "name": "Stephen Stills", "type": "person" },
+
+    { "id": "the-jimi-hendrix-experience", "name": "The Jimi Hendrix Experience", "type": "group" },
+    { "id": "jimi-hendrix", "name": "Jimi Hendrix", "type": "person" },
+
+    { "id": "the-velvet-underground", "name": "The Velvet Underground", "type": "group" },
+    { "id": "lou-reed", "name": "Lou Reed", "type": "person" },
+    { "id": "john-cale", "name": "John Cale", "type": "person" },
+
+    { "id": "the-stooges", "name": "The Stooges", "type": "group" },
+    { "id": "iggy-pop", "name": "Iggy Pop", "type": "person" },
+
+    { "id": "new-york-dolls", "name": "New York Dolls", "type": "group" },
+    { "id": "the-heartbreakers", "name": "Johnny Thunders and the Heartbreakers", "type": "group" },
+
+    { "id": "television", "name": "Television", "type": "group" },
+    { "id": "tom-verlaine", "name": "Tom Verlaine", "type": "person" },
+
+    { "id": "talking-heads", "name": "Talking Heads", "type": "group" },
+    { "id": "tom-tom-club", "name": "Tom Tom Club", "type": "group" },
+    { "id": "david-byrne", "name": "David Byrne", "type": "person" },
+
+    { "id": "black-flag", "name": "Black Flag", "type": "group" },
+    { "id": "circle-jerks", "name": "Circle Jerks", "type": "group" },
+    { "id": "rollins-band", "name": "Rollins Band", "type": "group" },
+    { "id": "henry-rollins", "name": "Henry Rollins", "type": "person" },
+    { "id": "greg-ginn", "name": "Greg Ginn", "type": "person" },
+
+    { "id": "minor-threat", "name": "Minor Threat", "type": "group" },
+    { "id": "fugazi", "name": "Fugazi", "type": "group" },
+    { "id": "ian-mackaye", "name": "Ian MacKaye", "type": "person" },
+
+    { "id": "husker-du", "name": "Hüsker Dü", "type": "group" },
+    { "id": "sugar", "name": "Sugar", "type": "group" },
+    { "id": "bob-mould", "name": "Bob Mould", "type": "person" },
+
+    { "id": "the-replacements", "name": "The Replacements", "type": "group" },
+    { "id": "paul-westerberg", "name": "Paul Westerberg", "type": "person" },
+
+    { "id": "janes-addiction", "name": "Jane's Addiction", "type": "group" },
+    { "id": "red-hot-chili-peppers", "name": "Red Hot Chili Peppers", "type": "group" },
+
+    { "id": "van-halen", "name": "Van Halen", "type": "group" },
+    { "id": "sammy-hagar", "name": "Sammy Hagar", "type": "person" },
+    { "id": "david-lee-roth", "name": "David Lee Roth", "type": "person" },
+
+    { "id": "guns-n-roses", "name": "Guns N' Roses", "type": "group" },
+    { "id": "velvet-revolver", "name": "Velvet Revolver", "type": "group" },
+    { "id": "slash", "name": "Slash", "type": "person" },
+    { "id": "axl-rose", "name": "Axl Rose", "type": "person" },
+
+    { "id": "metallica", "name": "Metallica", "type": "group" },
+    { "id": "megadeth", "name": "Megadeth", "type": "group" },
+    { "id": "dave-mustaine", "name": "Dave Mustaine", "type": "person" },
+
+    { "id": "nirvana", "name": "Nirvana", "type": "group" },
+    { "id": "foo-fighters", "name": "Foo Fighters", "type": "group" },
+    { "id": "dave-grohl", "name": "Dave Grohl", "type": "person" },
+    { "id": "kurt-cobain", "name": "Kurt Cobain", "type": "person" },
+
+    { "id": "soundgarden", "name": "Soundgarden", "type": "group" },
+    { "id": "audioslave", "name": "Audioslave", "type": "group" },
+    { "id": "temple-of-the-dog", "name": "Temple of the Dog", "type": "group" },
+    { "id": "chris-cornell", "name": "Chris Cornell", "type": "person" },
+
+    { "id": "pearl-jam", "name": "Pearl Jam", "type": "group" },
+    { "id": "mother-love-bone", "name": "Mother Love Bone", "type": "group" },
+    { "id": "eddie-vedder", "name": "Eddie Vedder", "type": "person" },
+    { "id": "stone-gossard", "name": "Stone Gossard", "type": "person" },
+    { "id": "jeff-ament", "name": "Jeff Ament", "type": "person" },
+
+    { "id": "alice-in-chains", "name": "Alice in Chains", "type": "group" },
+    { "id": "layne-staley", "name": "Layne Staley", "type": "person" },
+
+    { "id": "green-day", "name": "Green Day", "type": "group" },
+    { "id": "billie-joe-armstrong", "name": "Billie Joe Armstrong", "type": "person" },
+
+    { "id": "my-chemical-romance", "name": "My Chemical Romance", "type": "group" },
+    { "id": "gerard-way", "name": "Gerard Way", "type": "person" },
+
+    { "id": "the-white-stripes", "name": "The White Stripes", "type": "group" },
+    { "id": "the-raconteurs", "name": "The Raconteurs", "type": "group" },
+    { "id": "jack-white", "name": "Jack White", "type": "person" },
+
+    { "id": "the-strokes", "name": "The Strokes", "type": "group" },
+    { "id": "julian-casablancas", "name": "Julian Casablancas", "type": "person" }
+  ],
+  "links": [
+    { "source": "the-byrds", "target": "david-crosby", "label": "在籍(後に脱退)" },
+    { "source": "buffalo-springfield", "target": "stephen-stills", "label": "在籍" },
+    { "source": "buffalo-springfield", "target": "neil-young", "label": "在籍" },
+    { "source": "david-crosby", "target": "crosby-stills-nash-young", "label": "解散後に結成" },
+    { "source": "stephen-stills", "target": "crosby-stills-nash-young", "label": "解散後に結成" },
+    { "source": "neil-young", "target": "crosby-stills-nash-young", "label": "後に合流" },
+
+    { "source": "the-jimi-hendrix-experience", "target": "jimi-hendrix", "label": "在籍" },
+
+    { "source": "the-velvet-underground", "target": "lou-reed", "label": "在籍・脱退後ソロへ" },
+    { "source": "the-velvet-underground", "target": "john-cale", "label": "在籍・脱退後ソロへ" },
+
+    { "source": "the-stooges", "target": "iggy-pop", "label": "在籍・解散後ソロへ" },
+
+    { "source": "new-york-dolls", "target": "the-heartbreakers", "label": "脱退メンバーが結成" },
+
+    { "source": "television", "target": "tom-verlaine", "label": "在籍・解散後ソロへ" },
+
+    { "source": "talking-heads", "target": "david-byrne", "label": "在籍・解散後ソロへ" },
+    { "source": "talking-heads", "target": "tom-tom-club", "label": "他メンバーが並行して結成" },
+
+    { "source": "black-flag", "target": "greg-ginn", "label": "結成・在籍" },
+    { "source": "black-flag", "target": "henry-rollins", "label": "ヴォーカルとして加入" },
+    { "source": "circle-jerks", "target": "black-flag", "label": "メンバーが交流" },
+    { "source": "henry-rollins", "target": "rollins-band", "label": "解散後結成" },
+
+    { "source": "minor-threat", "target": "ian-mackaye", "label": "在籍" },
+    { "source": "ian-mackaye", "target": "fugazi", "label": "解散後結成" },
+
+    { "source": "husker-du", "target": "bob-mould", "label": "在籍・解散後ソロへ" },
+    { "source": "bob-mould", "target": "sugar", "label": "結成" },
+
+    { "source": "the-replacements", "target": "paul-westerberg", "label": "在籍・解散後ソロへ" },
+
+    { "source": "janes-addiction", "target": "red-hot-chili-peppers", "label": "メンバーが交流(デイヴ・ナヴァロが後に加入)" },
+
+    { "source": "van-halen", "target": "david-lee-roth", "label": "在籍(後に脱退)" },
+    { "source": "van-halen", "target": "sammy-hagar", "label": "デイヴ・リー・ロス脱退後に加入" },
+
+    { "source": "guns-n-roses", "target": "slash", "label": "在籍(後に脱退)" },
+    { "source": "guns-n-roses", "target": "axl-rose", "label": "在籍" },
+    { "source": "slash", "target": "velvet-revolver", "label": "脱退後結成" },
+
+    { "source": "metallica", "target": "dave-mustaine", "label": "在籍(結成直後に脱退)" },
+    { "source": "dave-mustaine", "target": "megadeth", "label": "脱退後結成" },
+
+    { "source": "nirvana", "target": "kurt-cobain", "label": "在籍" },
+    { "source": "nirvana", "target": "dave-grohl", "label": "ドラムで在籍" },
+    { "source": "dave-grohl", "target": "foo-fighters", "label": "ニルヴァーナ解散後に結成" },
+
+    { "source": "soundgarden", "target": "chris-cornell", "label": "在籍" },
+    { "source": "chris-cornell", "target": "temple-of-the-dog", "label": "追悼プロジェクトで参加" },
+    { "source": "chris-cornell", "target": "audioslave", "label": "サウンドガーデン解散後に結成" },
+
+    { "source": "mother-love-bone", "target": "stone-gossard", "label": "在籍" },
+    { "source": "mother-love-bone", "target": "jeff-ament", "label": "在籍" },
+    { "source": "stone-gossard", "target": "pearl-jam", "label": "解散後結成" },
+    { "source": "jeff-ament", "target": "pearl-jam", "label": "解散後結成" },
+    { "source": "pearl-jam", "target": "eddie-vedder", "label": "ヴォーカルとして加入" },
+    { "source": "stone-gossard", "target": "temple-of-the-dog", "label": "追悼プロジェクトで参加" },
+
+    { "source": "alice-in-chains", "target": "layne-staley", "label": "在籍" },
+
+    { "source": "green-day", "target": "billie-joe-armstrong", "label": "在籍" },
+
+    { "source": "my-chemical-romance", "target": "gerard-way", "label": "在籍" },
+
+    { "source": "the-white-stripes", "target": "jack-white", "label": "在籍・解散後ソロへ" },
+    { "source": "jack-white", "target": "the-raconteurs", "label": "並行プロジェクトとして結成" },
+
+    { "source": "the-strokes", "target": "julian-casablancas", "label": "在籍" }
+  ]
+}

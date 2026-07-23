@@ -1,0 +1,238 @@
+{
+  "categories": [
+    {
+      "id": "rock-and-roll",
+      "label": "ロックンロール / ロカビリー",
+      "period": "1950s",
+      "description": "R&Bとカントリーが融合して生まれた、アメリカン・ロックの原点。"
+    },
+    {
+      "id": "folk-rock",
+      "label": "フォークロック",
+      "period": "1960s",
+      "description": "フォークの弾き語り文化にエレクトリックなバンドサウンドを持ち込んだジャンル。"
+    },
+    {
+      "id": "surf-garage-rock",
+      "label": "サーフロック / ガレージロック",
+      "period": "1960s",
+      "description": "西海岸のサーフカルチャーと、地元のティーンバンドが荒っぽく鳴らすガレージサウンド。"
+    },
+    {
+      "id": "psychedelic-rock",
+      "label": "サイケデリックロック",
+      "period": "1960s",
+      "description": "幻覚的・実験的なサウンドと即興演奏を追求した西海岸中心のロック。"
+    },
+    {
+      "id": "southern-rock",
+      "label": "サザンロック",
+      "period": "1970s",
+      "description": "ブルースとカントリーを土台に、南部特有の泥臭いグルーヴを鳴らすロック。"
+    },
+    {
+      "id": "arena-hard-rock",
+      "label": "アリーナロック / ハードロック",
+      "period": "1970s",
+      "description": "巨大な会場を埋めるスケール感を志向した、歪んだギターと派手な演出のロック。グラム/ショックロックも含む。"
+    },
+    {
+      "id": "proto-punk",
+      "label": "プロトパンク",
+      "period": "1970s",
+      "description": "過剰なプロダクションへの反動として、荒々しく原始的な衝動を鳴らしたパンク前夜のロック。"
+    },
+    {
+      "id": "punk-rock",
+      "label": "パンクロック",
+      "period": "1970s",
+      "description": "ニューヨークのクラブシーンから生まれた、シンプルで速く攻撃的なロック。"
+    },
+    {
+      "id": "new-wave",
+      "label": "ニューウェイヴ",
+      "period": "1970s-1980s",
+      "description": "パンクの精神を保ちつつ、シンセサイザーやポップな感覚を取り入れた都会的なロック。"
+    },
+    {
+      "id": "hardcore-punk",
+      "label": "ハードコアパンク",
+      "period": "1980s",
+      "description": "パンクをさらに速く短く先鋭化させた、DIYシーン発の攻撃的なジャンル。"
+    },
+    {
+      "id": "college-rock-indie",
+      "label": "カレッジロック / インディーロック",
+      "period": "1980s",
+      "description": "大学ラジオ局を中心に支持された、メジャーとは距離を置く独立系のギターロック。"
+    },
+    {
+      "id": "glam-metal",
+      "label": "グラムメタル(ヘアメタル)",
+      "period": "1980s",
+      "description": "派手な化粧・髪型とキャッチーなコーラスを組み合わせた、ロサンゼルス発のメタル。"
+    },
+    {
+      "id": "heavy-metal",
+      "label": "ヘヴィメタル(スラッシュメタル含む)",
+      "period": "1980s",
+      "description": "攻撃性と超絶技巧を追求したメタル。ハードコアの速さを取り込んだスラッシュメタルを含む。"
+    },
+    {
+      "id": "grunge",
+      "label": "グランジ",
+      "period": "1990s",
+      "description": "シアトルを中心に、パンクの衝動とヘヴィなギターサウンドを融合させたジャンル。"
+    },
+    {
+      "id": "alternative-rock",
+      "label": "オルタナティブロック",
+      "period": "1990s-2000s",
+      "description": "グランジ以降、メインストリーム化した多様なオルタナティブ・サウンドの総称。"
+    },
+    {
+      "id": "pop-punk-emo",
+      "label": "ポップパンク / エモ",
+      "period": "1990s-2000s",
+      "description": "パンク/ハードコアの語法にポップなメロディや内省的な歌詞を持ち込んだジャンル。"
+    },
+    {
+      "id": "garage-indie-revival",
+      "label": "ガレージ / インディーリバイバル",
+      "period": "2000s",
+      "description": "2000年代、60年代ガレージロックの荒々しさを再解釈したリバイバル・ムーブメント。"
+    },
+    {
+      "id": "other",
+      "label": "その他(ルーツロック、アメリカーナ等)",
+      "period": "",
+      "description": "上記に当てはまらないロック系ジャンル。"
+    }
+  ],
+  "genealogy": [
+    { "from": "rock-and-roll", "to": "folk-rock" },
+    { "from": "rock-and-roll", "to": "surf-garage-rock" },
+    { "from": "rock-and-roll", "to": "southern-rock" },
+    { "from": "folk-rock", "to": "psychedelic-rock" },
+    { "from": "surf-garage-rock", "to": "psychedelic-rock" },
+    { "from": "surf-garage-rock", "to": "proto-punk" },
+    { "from": "psychedelic-rock", "to": "arena-hard-rock" },
+    { "from": "arena-hard-rock", "to": "glam-metal" },
+    { "from": "arena-hard-rock", "to": "heavy-metal" },
+    { "from": "proto-punk", "to": "punk-rock" },
+    { "from": "proto-punk", "to": "garage-indie-revival" },
+    { "from": "punk-rock", "to": "new-wave" },
+    { "from": "punk-rock", "to": "hardcore-punk" },
+    { "from": "new-wave", "to": "college-rock-indie" },
+    { "from": "hardcore-punk", "to": "college-rock-indie" },
+    { "from": "hardcore-punk", "to": "heavy-metal" },
+    { "from": "hardcore-punk", "to": "pop-punk-emo" },
+    { "from": "college-rock-indie", "to": "grunge" },
+    { "from": "college-rock-indie", "to": "alternative-rock" },
+    { "from": "grunge", "to": "alternative-rock" },
+    { "from": "alternative-rock", "to": "garage-indie-revival" }
+  ],
+  "tag_map": {
+    "rock and roll": ["rock-and-roll"],
+    "rock & roll": ["rock-and-roll"],
+    "rock'n'roll": ["rock-and-roll"],
+    "rockabilly": ["rock-and-roll"],
+    "doo-wop": ["rock-and-roll"],
+    "50s": ["rock-and-roll"],
+    "1950s": ["rock-and-roll"],
+
+    "folk rock": ["folk-rock"],
+    "folk": ["folk-rock"],
+    "singer-songwriter": ["folk-rock"],
+    "electric folk": ["folk-rock"],
+
+    "surf rock": ["surf-garage-rock"],
+    "surf": ["surf-garage-rock"],
+    "garage rock": ["surf-garage-rock"],
+    "garage punk": ["surf-garage-rock"],
+    "60s": ["surf-garage-rock"],
+    "60's": ["surf-garage-rock"],
+    "beat music": ["surf-garage-rock"],
+
+    "psychedelic rock": ["psychedelic-rock"],
+    "psychedelic": ["psychedelic-rock"],
+    "psychedelic pop": ["psychedelic-rock"],
+    "acid rock": ["psychedelic-rock"],
+    "raga rock": ["psychedelic-rock"],
+    "jam band": ["psychedelic-rock"],
+
+    "southern rock": ["southern-rock"],
+    "blues rock": ["southern-rock"],
+    "swamp rock": ["southern-rock"],
+    "boogie rock": ["southern-rock"],
+    "roots rock": ["southern-rock"],
+
+    "hard rock": ["arena-hard-rock"],
+    "arena rock": ["arena-hard-rock"],
+    "album rock": ["arena-hard-rock"],
+    "classic rock": ["arena-hard-rock"],
+    "glam rock": ["arena-hard-rock"],
+    "glitter rock": ["arena-hard-rock"],
+    "shock rock": ["arena-hard-rock"],
+
+    "proto-punk": ["proto-punk"],
+    "protopunk": ["proto-punk"],
+    "no wave": ["proto-punk"],
+    "art punk": ["proto-punk"],
+
+    "punk": ["punk-rock"],
+    "punk rock": ["punk-rock"],
+
+    "new wave": ["new-wave"],
+    "power pop": ["new-wave"],
+    "synth-pop": ["new-wave"],
+    "synthpop": ["new-wave"],
+    "new romantic": ["new-wave"],
+
+    "hardcore punk": ["hardcore-punk"],
+    "hardcore": ["hardcore-punk"],
+    "straight edge": ["hardcore-punk"],
+    "skate punk": ["hardcore-punk"],
+    "d-beat": ["hardcore-punk"],
+
+    "college rock": ["college-rock-indie"],
+    "indie rock": ["college-rock-indie"],
+    "noise rock": ["college-rock-indie"],
+    "jangle pop": ["college-rock-indie"],
+
+    "glam metal": ["glam-metal"],
+    "hair metal": ["glam-metal"],
+    "sleaze rock": ["glam-metal"],
+
+    "heavy metal": ["heavy-metal"],
+    "thrash metal": ["heavy-metal"],
+    "speed metal": ["heavy-metal"],
+    "metal": ["heavy-metal"],
+
+    "grunge": ["grunge"],
+    "seattle sound": ["grunge"],
+
+    "alternative rock": ["alternative-rock"],
+    "alternative": ["alternative-rock"],
+    "post-grunge": ["alternative-rock"],
+    "nu metal": ["alternative-rock"],
+    "funk metal": ["alternative-rock"],
+
+    "pop punk": ["pop-punk-emo"],
+    "pop-punk": ["pop-punk-emo"],
+    "emo": ["pop-punk-emo"],
+    "screamo": ["pop-punk-emo"],
+
+    "garage rock revival": ["garage-indie-revival"],
+    "post-punk revival": ["garage-indie-revival"],
+    "indie rock revival": ["garage-indie-revival"],
+
+    "americana": ["other"],
+    "country rock": ["other"],
+    "yacht rock": ["other"],
+    "soft rock": ["other"],
+    "art rock": ["other"],
+    "blue-eyed soul": ["other"],
+    "rock": ["other"]
+  }
+}
