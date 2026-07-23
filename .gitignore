@@ -8,6 +8,7 @@ data/backfill_progress.json
 data/artwork_progress.json
 data/personnel_progress.json
 data/lineup_progress.json
+data/tracklist_progress.json
 
 # macOS
 .DS_Store

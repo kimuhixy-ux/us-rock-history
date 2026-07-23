@@ -333,6 +333,28 @@ input[type="text"]:focus, input[type="search"]:focus, select:focus {
   color: var(--text-dim);
 }
 .album-links a:hover { color: var(--text); border-color: var(--accent); text-decoration: none; }
+.tracklist {
+  margin-top: 6px;
+  width: 100%;
+  font-size: 0.85em;
+}
+.tracklist summary {
+  cursor: pointer;
+  color: var(--text-dim);
+  user-select: none;
+}
+.tracklist summary:hover { color: var(--text); }
+.tracklist ol {
+  margin: 6px 0 0;
+  padding-left: 22px;
+  color: var(--text-dim);
+}
+.tracklist li { padding: 1px 0; }
+.tracklist .track-length {
+  color: var(--text-dim);
+  opacity: 0.7;
+  font-size: 0.9em;
+}
 
 /* ===== ジャンル系統図 ===== */
 .genealogy-wrap {
