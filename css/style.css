@@ -141,6 +141,16 @@ img, svg { max-width: 100%; }
 .app-footer p { margin: 4px 0; }
 .footer-links a { color: var(--text-dim); margin: 0 6px; }
 .footer-links a:hover { color: var(--accent2); }
+.footer-donate a {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  border-radius: 6px;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+.footer-donate a:hover { background: var(--accent-dim); }
 
 /* ===== 共通コンポーネント ===== */
 .page-title {
