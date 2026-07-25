@@ -2,6 +2,7 @@
 
 import { loadData, spotifySearchUrl, appleMusicSearchUrl } from "../data.js";
 import { escapeHtml } from "../router.js";
+import { buildAffiliateLink } from "../affiliate.js";
 
 let guideCache = null;
 async function loadGuide() {
@@ -24,6 +25,7 @@ export async function renderGuide(view) {
           <p class="genre-desc">${escapeHtml(c.description || "")}</p>
           ${albums.map((al) => {
             const q = `${al.artist} ${al.album}`;
+            const amazonUrl = buildAffiliateLink(al.amazon_asin);
             return `
               <div class="album-pick">
                 <div class="title">${escapeHtml(al.album)} <span style="color:var(--text-dim); font-weight:400;">(${al.year})</span></div>
@@ -32,6 +34,7 @@ export async function renderGuide(view) {
                 <div class="album-links" style="margin-top:8px;">
                   <a href="${spotifySearchUrl(q)}" target="_blank" rel="noopener">Spotify</a>
                   <a href="${appleMusicSearchUrl(q)}" target="_blank" rel="noopener">Apple Music</a>
+                  ${amazonUrl ? `<a href="${amazonUrl}" target="_blank" rel="sponsored noopener">CD/レコードを探す<span class="pr-label">PR</span></a>` : ""}
                 </div>
               </div>
             `;
