@@ -1,0 +1,542 @@
+{
+  "rock-and-roll": [
+    {
+      "artist": "Elvis Presley",
+      "album": "Elvis Presley",
+      "year": 1956,
+      "note": "A debut built around his Sun Studio sessions, announcing the birth of \"rock and roll\" by bridging R&B and country.",
+      "amazon_asin": "B0006TL9C8"
+    },
+    {
+      "artist": "Chuck Berry",
+      "album": "After School Session",
+      "year": 1957,
+      "note": "The album that single-handedly built the guitar vocabulary of rock and roll, epitomized by the riff of \"Johnny B. Goode.\"",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Little Richard",
+      "album": "Here's Little Richard",
+      "year": 1957,
+      "note": "A debut that captured rock and roll's frenzied energy through shrieking vocals and breakneck piano.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Buddy Holly",
+      "album": "The \"Chirping\" Crickets",
+      "year": 1957,
+      "note": "Already establishing the self-contained singer-songwriter, this record set the template for the rock band lineup to come.",
+      "amazon_asin": ""
+    }
+  ],
+  "folk-rock": [
+    {
+      "artist": "Bob Dylan",
+      "album": "Bringing It All Back Home",
+      "year": 1965,
+      "note": "A transitional record where acoustic and electric coexist, shocking the folk scene and opening the door to folk rock.",
+      "amazon_asin": "B0001M0KF2"
+    },
+    {
+      "artist": "The Byrds",
+      "album": "Mr. Tambourine Man",
+      "year": 1965,
+      "note": "A debut that rebuilt Dylan's songs with shimmering 12-string arpeggios, cementing \"folk rock\" as a genre name.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Simon & Garfunkel",
+      "album": "Bridge over Troubled Water",
+      "year": 1970,
+      "note": "The high point of folk rock's aesthetic, perfecting delicate harmonies and orchestration.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Bob Dylan",
+      "album": "Blonde on Blonde",
+      "year": 1966,
+      "note": "The culmination of a rock trilogy made with Nashville session musicians, crystallizing poetic lyrics and band sound at the highest level.",
+      "amazon_asin": ""
+    }
+  ],
+  "surf-garage-rock": [
+    {
+      "artist": "The Beach Boys",
+      "album": "Pet Sounds",
+      "year": 1966,
+      "note": "A landmark that moved past surf music's sunny image to open up the possibilities of the \"album\" through intricate arrangements and introspective lyrics.",
+      "amazon_asin": "B01BMIRE0W"
+    },
+    {
+      "artist": "The Beach Boys",
+      "album": "Surfin' U.S.A.",
+      "year": 1963,
+      "note": "An early landmark that converted West Coast surf culture and hot-rod pleasure directly into pop songs.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "The Velvet Underground",
+      "album": "The Velvet Underground & Nico",
+      "year": 1967,
+      "note": "Produced by Andy Warhol, this record presented a prototype for garage/art rock through lyrics about drugs and transgression paired with experimental noise.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "? and the Mysterians",
+      "album": "96 Tears",
+      "year": 1966,
+      "note": "A singles-driven debut with a memorable organ riff that distills garage rock's raw impulse.",
+      "amazon_asin": ""
+    }
+  ],
+  "psychedelic-rock": [
+    {
+      "artist": "The Doors",
+      "album": "The Doors",
+      "year": 1967,
+      "note": "A debut that condenses the dark, ritualistic worldview symbolized by \"The End\" and Jim Morrison's charisma.",
+      "amazon_asin": "B071V91H48"
+    },
+    {
+      "artist": "Jimi Hendrix",
+      "album": "Are You Experienced",
+      "year": 1967,
+      "note": "A revolutionary debut that redefined what the guitar itself could do, stretching blues into psychedelia.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Jefferson Airplane",
+      "album": "Surrealistic Pillow",
+      "year": 1967,
+      "note": "An album symbolizing San Francisco's counterculture, including \"White Rabbit.\"",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Grateful Dead",
+      "album": "American Beauty",
+      "year": 1970,
+      "note": "A classic that retains psychedelic improvisation while moving toward folk/country lyricism.",
+      "amazon_asin": ""
+    }
+  ],
+  "southern-rock": [
+    {
+      "artist": "The Allman Brothers Band",
+      "album": "At Fillmore East",
+      "year": 1971,
+      "note": "A live album capturing the interplay of twin guitars and extended improvisation — a landmark that perfectly captures the groove at the heart of southern rock.",
+      "amazon_asin": "B000003CMB"
+    },
+    {
+      "artist": "Lynyrd Skynyrd",
+      "album": "(Pronounced 'Lĕh-'nérd 'Skin-'nérd)",
+      "year": 1973,
+      "note": "The debut featuring \"Free Bird,\" combining gritty guitar work with lyrics full of Southern pride.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "ZZ Top",
+      "album": "Tres Hombres",
+      "year": 1973,
+      "note": "An early ZZ Top landmark pairing distinctly Texan blues feel with humor.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "The Allman Brothers Band",
+      "album": "Eat a Peach",
+      "year": 1972,
+      "note": "An ambitious release combining studio and live recordings, issued after Duane Allman's sudden death.",
+      "amazon_asin": ""
+    }
+  ],
+  "arena-hard-rock": [
+    {
+      "artist": "Aerosmith",
+      "album": "Toys in the Attic",
+      "year": 1975,
+      "note": "An early Aerosmith landmark balancing blues rock feel with American hedonism.",
+      "amazon_asin": "B0000250PB"
+    },
+    {
+      "artist": "Kiss",
+      "album": "Alive!",
+      "year": 1975,
+      "note": "A live album that captured their flashy makeup and performance in sound alone — a record that conveys the excitement of arena rock.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Boston",
+      "album": "Boston",
+      "year": 1976,
+      "note": "A debut whose thick, polished guitar sound set the production standard for arena rock.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Alice Cooper",
+      "album": "Billion Dollar Babies",
+      "year": 1973,
+      "note": "A landmark of shock rock, fusing horror theatrics with catchy rock songs.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Van Halen",
+      "album": "Van Halen",
+      "year": 1978,
+      "note": "A debut combining Eddie Van Halen's revolutionary guitar playing with hedonistic rock and roll.",
+      "amazon_asin": ""
+    }
+  ],
+  "proto-punk": [
+    {
+      "artist": "The Stooges",
+      "album": "Raw Power",
+      "year": 1973,
+      "note": "Iggy Pop's impulsive performance and stripped-down guitar sound — a record that symbolizes the eve of punk rock's birth.",
+      "amazon_asin": "B000024FRW"
+    },
+    {
+      "artist": "MC5",
+      "album": "Kick Out the Jams",
+      "year": 1969,
+      "note": "A live album recorded at a Detroit club, swirling with political radicalism and explosive playing.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "New York Dolls",
+      "album": "New York Dolls",
+      "year": 1973,
+      "note": "A debut fusing cross-dressing glam excess with raw rock and roll, leaving a direct influence on the punk that followed.",
+      "amazon_asin": ""
+    }
+  ],
+  "punk-rock": [
+    {
+      "artist": "Ramones",
+      "album": "Ramones",
+      "year": 1976,
+      "note": "A debut built from songs almost all under two minutes, stripped of ornamentation — this shaped the template for American punk.",
+      "amazon_asin": "B01JBIIB0W"
+    },
+    {
+      "artist": "Patti Smith",
+      "album": "Horses",
+      "year": 1975,
+      "note": "An intellectual, defining work of the CBGB scene, fusing spoken-word poetry with rock and roll.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Television",
+      "album": "Marquee Moon",
+      "year": 1977,
+      "note": "A singular record that retains punk's impulse while deploying intricate guitar interplay — a landmark of art punk.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Dead Kennedys",
+      "album": "Fresh Fruit for Rotting Vegetables",
+      "year": 1980,
+      "note": "A defining debut combining West Coast punk's ferocity with satirical politics.",
+      "amazon_asin": ""
+    }
+  ],
+  "new-wave": [
+    {
+      "artist": "Talking Heads",
+      "album": "Remain in Light",
+      "year": 1980,
+      "note": "A record that boldly incorporated Afrobeat elements, developing new wave into more experimental, exhilarating dance music.",
+      "amazon_asin": "B000002KO3"
+    },
+    {
+      "artist": "Blondie",
+      "album": "Parallel Lines",
+      "year": 1978,
+      "note": "A landmark that fused punk energy, pop songcraft, and disco beats, and found commercial success as well.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Talking Heads",
+      "album": "Talking Heads: 77",
+      "year": 1977,
+      "note": "A debut where nervy, angular funk coexists with pop songs, opening up new wave's more intellectual side.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "The Cars",
+      "album": "The Cars",
+      "year": 1978,
+      "note": "A polished American new wave debut fusing power pop with synthesizers.",
+      "amazon_asin": ""
+    }
+  ],
+  "hardcore-punk": [
+    {
+      "artist": "Black Flag",
+      "album": "Damaged",
+      "year": 1981,
+      "note": "Their first album after Henry Rollins joined. Its raw, heavy guitar set the standard for hardcore punk.",
+      "amazon_asin": "B000000LZ2"
+    },
+    {
+      "artist": "Minor Threat",
+      "album": "Complete Discography",
+      "year": 1989,
+      "note": "The complete recordings of the Washington D.C. band that birthed straight edge culture — short, sharp songs distilling hardcore's aesthetic.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Bad Brains",
+      "album": "Bad Brains",
+      "year": 1982,
+      "note": "A debut of astonishing musicianship, careening at high speed between reggae and hardcore punk.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Hüsker Dü",
+      "album": "Zen Arcade",
+      "year": 1984,
+      "note": "An ambitious double album that retains hardcore's velocity while boldly incorporating melody and experimentation.",
+      "amazon_asin": ""
+    }
+  ],
+  "college-rock-indie": [
+    {
+      "artist": "R.E.M.",
+      "album": "Murmur",
+      "year": 1983,
+      "note": "A debut that established college rock's aesthetic through mumbled vocals and shimmering jangly guitar.",
+      "amazon_asin": "B01G65TH8"
+    },
+    {
+      "artist": "Pixies",
+      "album": "Doolittle",
+      "year": 1989,
+      "note": "A record whose extreme loud/quiet dynamic shift had a massive influence on 1990s alternative rock.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Sonic Youth",
+      "album": "Daydream Nation",
+      "year": 1988,
+      "note": "A landmark double album of noise rock that wields alternate tunings and noise while still holding onto pop moments.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "The Replacements",
+      "album": "Let It Be",
+      "year": 1984,
+      "note": "A key 1980s American indie record combining punk's rawness with power-pop songcraft.",
+      "amazon_asin": ""
+    }
+  ],
+  "glam-metal": [
+    {
+      "artist": "Mötley Crüe",
+      "album": "Shout at the Devil",
+      "year": 1983,
+      "note": "A record distilling the hedonism and danger of the Sunset Strip, symbolic of the hair metal movement.",
+      "amazon_asin": "B01GJMFESK"
+    },
+    {
+      "artist": "Guns N' Roses",
+      "album": "Appetite for Destruction",
+      "year": 1987,
+      "note": "A debut balancing the rawness of the Los Angeles streets with pop melodies, marking the peak of the hair metal era.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Van Halen",
+      "album": "1984",
+      "year": 1984,
+      "note": "A glam metal-era landmark that boldly embraces synthesizers while never losing its overwhelming guitar presence.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Poison",
+      "album": "Look What the Cat Dragged In",
+      "year": 1986,
+      "note": "A debut symbolizing hair metal's commercial peak with flashy makeup and catchy choruses.",
+      "amazon_asin": ""
+    }
+  ],
+  "heavy-metal": [
+    {
+      "artist": "Metallica",
+      "album": "Master of Puppets",
+      "year": 1986,
+      "note": "A record widely regarded as a landmark of thrash metal, balancing intricate song structures with overwhelming speed.",
+      "amazon_asin": "B0757HTJCZ"
+    },
+    {
+      "artist": "Megadeth",
+      "album": "Rust in Peace",
+      "year": 1990,
+      "note": "A record demonstrating thrash metal's technical peak through virtuosic twin-guitar work and intricate arrangements.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Slayer",
+      "album": "Reign in Blood",
+      "year": 1986,
+      "note": "29 minutes of overwhelming speed and violence — an extreme landmark that also influenced the birth of death metal.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Pantera",
+      "album": "Vulgar Display of Power",
+      "year": 1992,
+      "note": "A heavyweight record that shaped the template for groove metal, combining aggression with a tight rhythmic pocket.",
+      "amazon_asin": ""
+    }
+  ],
+  "grunge": [
+    {
+      "artist": "Nirvana",
+      "album": "Nevermind",
+      "year": 1991,
+      "note": "A historic record that pushed grunge into the mainstream, featuring \"Smells Like Teen Spirit.\"",
+      "amazon_asin": "B0057GYO9K"
+    },
+    {
+      "artist": "Pearl Jam",
+      "album": "Ten",
+      "year": 1991,
+      "note": "Pearl Jam's debut, fusing arena rock scale with grunge introspection.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Soundgarden",
+      "album": "Superunknown",
+      "year": 1994,
+      "note": "A landmark that fused heavy-metal weight with psychedelic elements, showing off grunge's musical range.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Alice in Chains",
+      "album": "Dirt",
+      "year": 1992,
+      "note": "One of grunge's most shadowed, affecting records, portraying addiction through heavy, dark sound.",
+      "amazon_asin": ""
+    }
+  ],
+  "alternative-rock": [
+    {
+      "artist": "Red Hot Chili Peppers",
+      "album": "Blood Sugar Sex Magik",
+      "year": 1991,
+      "note": "The record where the funk-rock band's personality bloomed most richly, including its more introspective songs.",
+      "amazon_asin": "B005804N1Y"
+    },
+    {
+      "artist": "Foo Fighters",
+      "album": "The Colour and the Shape",
+      "year": 1997,
+      "note": "A melodic alternative rock landmark, Dave Grohl's first serious effort as a full band after Nirvana's end.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Smashing Pumpkins",
+      "album": "Siamese Dream",
+      "year": 1993,
+      "note": "A record that marked one of the peaks of 1990s alternative rock through thick, layered guitar sound and sweeping song structures.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Weezer",
+      "album": "Weezer (Blue Album)",
+      "year": 1994,
+      "note": "A beloved 1990s alternative record combining power-pop accessibility with nerdy introspection.",
+      "amazon_asin": ""
+    }
+  ],
+  "pop-punk-emo": [
+    {
+      "artist": "Green Day",
+      "album": "Dookie",
+      "year": 1994,
+      "note": "A record that channeled hardcore punk's velocity into pop melody, pushing pop-punk into a worldwide genre.",
+      "amazon_asin": "B000002MP2"
+    },
+    {
+      "artist": "My Chemical Romance",
+      "album": "The Black Parade",
+      "year": 2006,
+      "note": "A landmark of 2000s emo, balancing concept-album architecture with emo's emotional intensity.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Green Day",
+      "album": "American Idiot",
+      "year": 2004,
+      "note": "A major work depicting political anger through the format of a punk-rock opera, cementing the band's comeback.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Jimmy Eat World",
+      "album": "Bleed American",
+      "year": 2001,
+      "note": "A key record fusing emo's introspection with power-pop's uplift, bridging emo into the mainstream.",
+      "amazon_asin": ""
+    }
+  ],
+  "garage-indie-revival": [
+    {
+      "artist": "The Strokes",
+      "album": "Is This It",
+      "year": 2001,
+      "note": "A record that rebuilt the rawness of '60s garage rock through New York urban sensibility, becoming the starting point of the 2000s rock revival.",
+      "amazon_asin": "B00005NEUF"
+    },
+    {
+      "artist": "The White Stripes",
+      "album": "Elephant",
+      "year": 2003,
+      "note": "A record that draws out the primal power of blues and garage rock to its fullest with just guitar and drums.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "The White Stripes",
+      "album": "White Blood Cells",
+      "year": 2001,
+      "note": "The breakthrough record that led the garage rock revival's momentum through lo-fi production and impulsive playing.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Kings of Leon",
+      "album": "Youth and Young Manhood",
+      "year": 2003,
+      "note": "A debut from a Southern band carrying on the southern rock lineage while playing with raw garage rock impulse.",
+      "amazon_asin": ""
+    }
+  ],
+  "other": [
+    {
+      "artist": "Steely Dan",
+      "album": "Aja",
+      "year": 1977,
+      "note": "A record that could be called the pinnacle of studio craft, translating advanced jazz vocabulary into a rock/pop context.",
+      "amazon_asin": "B0000259F9"
+    },
+    {
+      "artist": "Wilco",
+      "album": "Yankee Hotel Foxtrot",
+      "year": 2002,
+      "note": "A defining roots-rock masterpiece of the 2000s, fusing Americana vocabulary with experimental sound processing.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Eagles",
+      "album": "Hotel California",
+      "year": 1976,
+      "note": "A quintessential American rock album balancing country-rock lyricism with arena-rock scale.",
+      "amazon_asin": ""
+    },
+    {
+      "artist": "Tom Petty and the Heartbreakers",
+      "album": "Damn the Torpedoes",
+      "year": 1979,
+      "note": "Tom Petty's defining record, combining roots rock's solid craft with power-pop songcraft.",
+      "amazon_asin": ""
+    }
+  ]
+}

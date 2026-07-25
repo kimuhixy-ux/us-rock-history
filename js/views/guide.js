@@ -3,15 +3,17 @@
 import { loadData, spotifySearchUrl, appleMusicSearchUrl } from "../data.js";
 import { escapeHtml } from "../router.js";
 import { buildAffiliateLink } from "../affiliate.js";
+import { ROOT, localeDataFile } from "../i18n.js";
+import { S } from "../strings.js";
 
 let guideCache = null;
 async function loadGuide() {
-  if (!guideCache) guideCache = await fetch("data/album_guide.json").then((r) => r.json());
+  if (!guideCache) guideCache = await fetch(`${ROOT}${localeDataFile("data/album_guide.json")}`).then((r) => r.json());
   return guideCache;
 }
 
 export async function renderGuide(view) {
-  view.innerHTML = `<div class="loading">読み込み中…</div>`;
+  view.innerHTML = `<div class="loading">${S.loading}</div>`;
   const [{ genres }, guide] = await Promise.all([loadData(), loadGuide()]);
   const categoryById = new Map(genres.categories.map((c) => [c.id, c]));
 
@@ -34,7 +36,7 @@ export async function renderGuide(view) {
                 <div class="album-links" style="margin-top:8px;">
                   <a href="${spotifySearchUrl(q)}" target="_blank" rel="noopener">Spotify</a>
                   <a href="${appleMusicSearchUrl(q)}" target="_blank" rel="noopener">Apple Music</a>
-                  ${amazonUrl ? `<a href="${amazonUrl}" target="_blank" rel="sponsored noopener">CD/レコードを探す<span class="pr-label">PR</span></a>` : ""}
+                  ${amazonUrl ? `<a href="${amazonUrl}" target="_blank" rel="sponsored noopener">${S.findOnAmazon}<span class="pr-label">PR</span></a>` : ""}
                 </div>
               </div>
             `;
@@ -44,8 +46,8 @@ export async function renderGuide(view) {
     }).join("");
 
   view.innerHTML = `
-    <h1 class="page-title">名盤ガイド</h1>
-    <p class="page-lead">ジャンルごとに選んだ代表的な名盤です。まずここから聴き始めてみてください。</p>
+    <h1 class="page-title">${S.guideTitle}</h1>
+    <p class="page-lead">${S.guideLead}</p>
     ${html}
   `;
 }

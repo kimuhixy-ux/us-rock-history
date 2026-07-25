@@ -1,13 +1,15 @@
 // data.js: JSONデータの読み込みとキャッシュ、ジャンル判定・お気に入りなどの共通ロジック
 
+import { LOCALE, ROOT, localeDataFile } from "./i18n.js";
+
 let cache = null;
 
 export async function loadData() {
   if (cache) return cache;
   const [artists, genres, relations] = await Promise.all([
-    fetch("data/artists.json").then((r) => r.json()),
-    fetch("data/genres.json").then((r) => r.json()),
-    fetch("data/relations.json").then((r) => r.json()),
+    fetch(`${ROOT}data/artists.json`).then((r) => r.json()),
+    fetch(`${ROOT}${localeDataFile("data/genres.json")}`).then((r) => r.json()),
+    fetch(`${ROOT}data/relations.json`).then((r) => r.json()),
   ]);
 
   const tagMap = genres.tag_map || {};
@@ -71,9 +73,11 @@ export function spotifySearchUrl(query) {
 }
 
 export function appleMusicSearchUrl(query) {
-  return `https://music.apple.com/jp/search?term=${encodeURIComponent(query)}`;
+  const storefront = LOCALE === "en" ? "us" : "jp";
+  return `https://music.apple.com/${storefront}/search?term=${encodeURIComponent(query)}`;
 }
 
-export function wikipediaJaUrl(name) {
-  return `https://ja.wikipedia.org/wiki/${encodeURIComponent(name)}`;
+export function wikipediaUrl(name) {
+  const domain = LOCALE === "en" ? "en.wikipedia.org" : "ja.wikipedia.org";
+  return `https://${domain}/wiki/${encodeURIComponent(name)}`;
 }

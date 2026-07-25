@@ -2,8 +2,10 @@
 
 import { loadData, decadeOf } from "../data.js";
 import { artistCardHtml } from "../components/artist-card.js";
+import { LOCALE } from "../i18n.js";
+import { S } from "../strings.js";
 
-const DECADES = [
+const DECADES_JA = [
   {
     year: 0,
     label: "〜1950年代",
@@ -57,8 +59,64 @@ const DECADES = [
   },
 ];
 
+const DECADES_EN = [
+  {
+    year: 0,
+    label: "Before the 1950s",
+    desc: `Rock and roll emerged from a fusion of blues, country, gospel, and R&B.
+      Elvis Presley, Chuck Berry, and Little Richard ignited youth culture via radio and records,
+      laying the vocabulary — guitar riffs, the backbeat — that rock would build on for decades.`,
+  },
+  {
+    year: 1960,
+    label: "1960s",
+    desc: `Surf and garage rock spread from the West Coast with the Beach Boys, while Bob Dylan's
+      electric turn and The Byrds opened the door to folk rock. San Francisco became the epicenter
+      of psychedelic rock, with the Grateful Dead and Jefferson Airplane tying the music to the
+      counterculture; 1969's Woodstock became the era's defining symbol.`,
+  },
+  {
+    year: 1970,
+    label: "1970s",
+    desc: `Singer-songwriters like Joni Mitchell established deeply personal lyricism, while the
+      Allman Brothers Band and Lynyrd Skynyrd's southern rock reflected the culture of the American
+      South. Aerosmith and Kiss built arena-scale hard rock, and by decade's end, the proto-punk of
+      the Stooges, MC5, and New York Dolls fed into the punk rock (Ramones and the CBGB scene) that followed.`,
+  },
+  {
+    year: 1980,
+    label: "1980s",
+    desc: `Black Flag and Dead Kennedys drove hardcore punk with a DIY ethic, while R.E.M.'s college
+      rock laid the groundwork for later indie rock. Mötley Crüe and Bon Jovi's glam metal (hair metal)
+      colored the MTV era, and Metallica's thrash intensified heavy metal.`,
+  },
+  {
+    year: 1990,
+    label: "1990s",
+    desc: `Nirvana and Pearl Jam's grunge, centered on Seattle, upended the rock scene and pushed
+      alternative rock into the mainstream overnight. In its wake, Green Day and the Offspring
+      popularized pop-punk, opening the door for a new generation of listeners.`,
+  },
+  {
+    year: 2000,
+    label: "2000s",
+    desc: `The Strokes and The White Stripes led a garage/indie revival, reviving raw, unpolished
+      rock and roll. At the same time, blink-182 and My Chemical Romance's pop-punk/emo captured
+      teenage emotion vividly, winning over a generation of young fans.`,
+  },
+  {
+    year: 2010,
+    label: "2010s—",
+    desc: `With the arrival of streaming, indie rock diversified further, blending with folk,
+      electronica, and R&B/soul. As genre boundaries grew more fluid, new crossovers between pop
+      and rock emerged, and American rock continues to be heard across generations.`,
+  },
+];
+
+const DECADES = LOCALE === "en" ? DECADES_EN : DECADES_JA;
+
 export async function renderTimeline(view) {
-  view.innerHTML = `<div class="loading">読み込み中…</div>`;
+  view.innerHTML = `<div class="loading">${S.loading}</div>`;
   const { artists } = await loadData();
 
   const byDecade = new Map(DECADES.map((d) => [d.year, []]));
@@ -74,21 +132,21 @@ export async function renderTimeline(view) {
   }
 
   const html = `
-    <h1 class="page-title">年表</h1>
-    <p class="page-lead">1950年代以前から現在まで、活動開始年ごとにアメリカのロックアーティストを辿れます。</p>
+    <h1 class="page-title">${S.timelineTitle}</h1>
+    <p class="page-lead">${S.timelineLead}</p>
     ${DECADES.map((d) => {
       const list = byDecade.get(d.year).sort((a, b) => (a.begin_year - b.begin_year) || a.name.localeCompare(b.name));
       return `
         <section class="decade-block">
           <div class="decade-header">
             <span class="decade-year">${d.label}</span>
-            <span class="chip">${list.length}組</span>
+            <span class="chip">${S.artistsCount(list.length)}</span>
           </div>
           <p class="decade-desc">${d.desc.trim().replace(/\s+/g, " ")}</p>
           <div class="artist-grid">
             ${list.slice(0, 24).map((a) => artistCardHtml(a)).join("")}
           </div>
-          ${list.length > 24 ? `<p style="margin-top:10px"><a href="#/artists${d.year === 0 || d.year === 2010 ? "" : `?decade=${d.year}`}">この年代のアーティストをもっと見る(${list.length}組)→</a></p>` : ""}
+          ${list.length > 24 ? `<p style="margin-top:10px"><a href="#/artists${d.year === 0 || d.year === 2010 ? "" : `?decade=${d.year}`}">${S.seeMoreArtists(list.length)}</a></p>` : ""}
         </section>
       `;
     }).join("")}

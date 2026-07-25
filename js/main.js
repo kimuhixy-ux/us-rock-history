@@ -11,6 +11,7 @@ import { renderGlossary } from "./views/glossary.js";
 import { renderFavorites } from "./views/favorites.js";
 import { renderStats } from "./views/stats.js";
 import { renderDonateLink } from "./donate.js";
+import { ROOT } from "./i18n.js";
 
 addRoute(/^#\/timeline$/, renderTimeline);
 addRoute(/^#\/artists(?:\?(.*))?$/, renderArtists);
@@ -43,7 +44,7 @@ mainNav.addEventListener("click", (e) => {
 // Service Workerの登録(オフライン対応)
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js").catch((err) => {
+    navigator.serviceWorker.register(`${ROOT}sw.js`).catch((err) => {
       console.warn("Service Workerの登録に失敗しました:", err);
     });
   });

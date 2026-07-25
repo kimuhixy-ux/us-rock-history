@@ -2,6 +2,7 @@
 
 import { loadData } from "../data.js";
 import { escapeHtml } from "../router.js";
+import { S } from "../strings.js";
 
 // 各ジャンルカテゴリの表示位置(SVG座標、ノード中心)。おおよそ左→右が年代の流れ、
 // 上下は系統(フォーク/サーフ系・ハードロック系・パンク系)を表す。
@@ -32,7 +33,7 @@ const NODE_W = 160;
 const NODE_H = 48;
 
 export async function renderGenres(view) {
-  view.innerHTML = `<div class="loading">読み込み中…</div>`;
+  view.innerHTML = `<div class="loading">${S.loading}</div>`;
   const { genres } = await loadData();
   const { categories, genealogy } = genres;
 
@@ -56,10 +57,10 @@ export async function renderGenres(view) {
   }).join("");
 
   view.innerHTML = `
-    <h1 class="page-title">ジャンル系統図</h1>
-    <p class="page-lead">アメリカのロックシーンにおける主なジャンルの派生関係です。ノードをタップするとそのジャンルのアーティスト一覧に移動します。</p>
+    <h1 class="page-title">${S.genresTitle}</h1>
+    <p class="page-lead">${S.genresLead}</p>
     <div class="genealogy-wrap">
-      <svg viewBox="0 0 1080 760" width="1080" height="760" role="img" aria-label="ジャンル系統図">
+      <svg viewBox="0 0 1080 760" width="1080" height="760" role="img" aria-label="${S.genresSvgAriaLabel}">
         <defs>
           <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M0,0L10,5L0,10z" fill="#9a9aa8"></path>

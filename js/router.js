@@ -1,5 +1,7 @@
 // router.js: シンプルなハッシュルーター
 
+import { S } from "./strings.js";
+
 const routes = [];
 
 export function addRoute(pattern, handler) {
@@ -25,12 +27,12 @@ export async function render() {
         await handler(view, ...m.slice(1).map((s) => (s ? decodeURIComponent(s) : s)));
       } catch (err) {
         console.error(err);
-        view.innerHTML = `<div class="empty-state">読み込みエラーが発生しました: ${escapeHtml(String(err.message || err))}</div>`;
+        view.innerHTML = `<div class="empty-state">${S.loadError(escapeHtml(String(err.message || err)))}</div>`;
       }
       return;
     }
   }
-  view.innerHTML = `<div class="empty-state">ページが見つかりません</div>`;
+  view.innerHTML = `<div class="empty-state">${S.notFound}</div>`;
 }
 
 function updateActiveNav(hash) {

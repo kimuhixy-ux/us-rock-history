@@ -1,24 +1,25 @@
 // artist-detail.js: アーティスト詳細ページ
 
-import { loadData, findArtistBySlug, isFavorite, toggleFavorite, spotifySearchUrl, appleMusicSearchUrl, wikipediaJaUrl } from "../data.js";
+import { loadData, findArtistBySlug, isFavorite, toggleFavorite, spotifySearchUrl, appleMusicSearchUrl, wikipediaUrl } from "../data.js";
 import { escapeHtml } from "../router.js";
+import { S } from "../strings.js";
 
 export async function renderArtistDetail(view, slug) {
-  view.innerHTML = `<div class="loading">読み込み中…</div>`;
+  view.innerHTML = `<div class="loading">${S.loading}</div>`;
   const { artists, genres, categoryById } = await loadData();
   const artist = findArtistBySlug(artists, slug);
 
   if (!artist) {
-    view.innerHTML = `<div class="empty-state">アーティストが見つかりませんでした。<br><a href="#/artists">一覧に戻る</a></div>`;
+    view.innerHTML = `<div class="empty-state">${S.artistNotFound}<br><a href="#/artists">${S.backToList}</a></div>`;
     return;
   }
 
-  const typeLabel = artist.type === "person" ? "個人" : "グループ";
-  const period = `${artist.begin_year ?? "不明"} 〜 ${artist.end_year ?? "現在"}`;
+  const typeLabel = artist.type === "person" ? S.person : S.group;
+  const period = `${artist.begin_year ?? S.yearUnknownShort} ${S.periodSeparator} ${artist.end_year ?? S.present}`;
   const genreLabels = artist.genreIds.map((id) => categoryById.get(id)?.label).filter(Boolean);
 
   view.innerHTML = `
-    <p><a href="#/artists">← アーティスト一覧に戻る</a></p>
+    <p><a href="#/artists">${S.backToArtists}</a></p>
     <div class="detail-header">
       <h1>${escapeHtml(artist.name)}</h1>
       <div class="detail-meta">
@@ -29,24 +30,24 @@ export async function renderArtistDetail(view, slug) {
       </div>
       <div style="display:flex; gap:8px; flex-wrap:wrap;">
         <button class="btn fav ${isFavorite(artist.mbid) ? "is-active" : ""}" id="favBtn">
-          ${isFavorite(artist.mbid) ? "★ お気に入り解除" : "☆ お気に入りに追加"}
+          ${isFavorite(artist.mbid) ? S.favRemove : S.favAdd}
         </button>
-        <a class="btn" href="${wikipediaJaUrl(artist.name)}" target="_blank" rel="noopener">Wikipedia(日本語版)</a>
-        <a class="btn" href="${spotifySearchUrl(artist.name)}" target="_blank" rel="noopener">Spotifyで検索</a>
-        <a class="btn" href="${appleMusicSearchUrl(artist.name)}" target="_blank" rel="noopener">Apple Musicで検索</a>
+        <a class="btn" href="${wikipediaUrl(artist.name)}" target="_blank" rel="noopener">${S.wikipediaLabel}</a>
+        <a class="btn" href="${spotifySearchUrl(artist.name)}" target="_blank" rel="noopener">${S.spotifySearch}</a>
+        <a class="btn" href="${appleMusicSearchUrl(artist.name)}" target="_blank" rel="noopener">${S.appleMusicSearch}</a>
       </div>
     </div>
 
-    <h2 style="margin-top:28px; font-size:16px;">スタジオ・ディスコグラフィ(${artist.albums.length}枚)</h2>
+    <h2 style="margin-top:28px; font-size:16px;">${S.discographyHeading(artist.albums.length)}</h2>
     <div class="discography">
-      ${artist.albums.length ? artist.albums.map((al) => albumRowHtml(artist, al)).join("") : `<p class="empty-hint">登録されているスタジオアルバムがありません。</p>`}
+      ${artist.albums.length ? artist.albums.map((al) => albumRowHtml(artist, al)).join("") : `<p class="empty-hint">${S.noAlbums}</p>`}
     </div>
   `;
 
   view.querySelector("#favBtn").addEventListener("click", (e) => {
     const active = toggleFavorite(artist.mbid);
     e.target.classList.toggle("is-active", active);
-    e.target.textContent = active ? "★ お気に入り解除" : "☆ お気に入りに追加";
+    e.target.textContent = active ? S.favRemove : S.favAdd;
   });
 }
 
@@ -60,11 +61,11 @@ function albumRowHtml(artist, album) {
       ${artwork}
       <div class="album-info">
         <span class="album-title">${escapeHtml(album.title)}</span>
-        <span class="album-year">${album.year ?? "年不明"}</span>
+        <span class="album-year">${album.year ?? S.yearUnknown}</span>
         ${album.personnel
-          ? `<div class="personnel" style="margin-top:4px; font-size:0.85em; color:var(--text-dim);">参加ミュージシャン: ${escapeHtml(album.personnel)}</div>`
+          ? `<div class="personnel" style="margin-top:4px; font-size:0.85em; color:var(--text-dim);">${S.personnelPrefix}${escapeHtml(album.personnel)}</div>`
           : album.lineup
-          ? `<div class="personnel" style="margin-top:4px; font-size:0.85em; color:var(--text-dim);">推定メンバー(発売年の在籍期間より): ${escapeHtml(album.lineup)}</div>`
+          ? `<div class="personnel" style="margin-top:4px; font-size:0.85em; color:var(--text-dim);">${S.lineupPrefix}${escapeHtml(album.lineup)}</div>`
           : ""}
         ${tracklistHtml(album)}
       </div>
@@ -83,7 +84,7 @@ function tracklistHtml(album) {
     .join("");
   return `
     <details class="tracklist">
-      <summary>収録曲(${album.tracks.length}曲)</summary>
+      <summary>${S.tracklistSummary(album.tracks.length)}</summary>
       <ol>${items}</ol>
     </details>
   `;

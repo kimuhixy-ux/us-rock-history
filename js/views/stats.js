@@ -2,9 +2,10 @@
 
 import { loadData, decadeOf } from "../data.js";
 import { escapeHtml } from "../router.js";
+import { S } from "../strings.js";
 
 export async function renderStats(view) {
-  view.innerHTML = `<div class="loading">読み込み中…</div>`;
+  view.innerHTML = `<div class="loading">${S.loading}</div>`;
   const { artists, genres, categoryById } = await loadData();
 
   // 年代別アルバムリリース数
@@ -34,22 +35,22 @@ export async function renderStats(view) {
   const personCount = artists.length - groupCount;
 
   view.innerHTML = `
-    <h1 class="page-title">統計</h1>
-    <p class="page-lead">収集したデータ(全${artists.length}組)から見る、アメリカロックの傾向です。</p>
+    <h1 class="page-title">${S.statsTitle}</h1>
+    <p class="page-lead">${S.statsLead(artists.length)}</p>
 
     <div class="stats-grid">
       <div class="card stat-card">
-        <h3>基本情報</h3>
-        <div class="bar-row"><span class="bar-label">グループ</span><div class="bar-track"><div class="bar-fill" style="width:${(groupCount / artists.length) * 100}%"></div></div><span class="bar-value">${groupCount}</span></div>
-        <div class="bar-row"><span class="bar-label">個人</span><div class="bar-track"><div class="bar-fill" style="width:${(personCount / artists.length) * 100}%"></div></div><span class="bar-value">${personCount}</span></div>
+        <h3>${S.basicInfo}</h3>
+        <div class="bar-row"><span class="bar-label">${S.group}</span><div class="bar-track"><div class="bar-fill" style="width:${(groupCount / artists.length) * 100}%"></div></div><span class="bar-value">${groupCount}</span></div>
+        <div class="bar-row"><span class="bar-label">${S.person}</span><div class="bar-track"><div class="bar-fill" style="width:${(personCount / artists.length) * 100}%"></div></div><span class="bar-value">${personCount}</span></div>
       </div>
     </div>
 
     <div class="card stat-card" style="margin-bottom:20px;">
-      <h3>年代別アルバムリリース数</h3>
+      <h3>${S.albumsByDecadeHeading}</h3>
       ${decadeEntries.map(([dec, count]) => `
         <div class="bar-row">
-          <span class="bar-label">${dec}年代</span>
+          <span class="bar-label">${S.decadeLabel(dec)}</span>
           <div class="bar-track"><div class="bar-fill" style="width:${(count / maxAlbums) * 100}%"></div></div>
           <span class="bar-value">${count}</span>
         </div>
@@ -57,7 +58,7 @@ export async function renderStats(view) {
     </div>
 
     <div class="card stat-card">
-      <h3>ジャンル別アーティスト数</h3>
+      <h3>${S.artistsByGenreHeading}</h3>
       ${genreEntries.map(([gid, count]) => `
         <div class="bar-row">
           <span class="bar-label">${escapeHtml(categoryById.get(gid)?.label || gid)}</span>

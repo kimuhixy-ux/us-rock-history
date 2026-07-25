@@ -3,9 +3,10 @@
 import { loadData } from "../data.js";
 import { artistCardHtml } from "../components/artist-card.js";
 import { escapeHtml } from "../router.js";
+import { S } from "../strings.js";
 
 export async function renderArtists(view, queryString) {
-  view.innerHTML = `<div class="loading">読み込み中…</div>`;
+  view.innerHTML = `<div class="loading">${S.loading}</div>`;
   const { artists, genres } = await loadData();
   const params = new URLSearchParams(queryString || "");
 
@@ -18,15 +19,15 @@ export async function renderArtists(view, queryString) {
   };
 
   view.innerHTML = `
-    <h1 class="page-title">アーティスト一覧</h1>
-    <p class="page-lead">全${artists.length}組のアメリカのロックアーティストを検索・絞り込みできます。</p>
+    <h1 class="page-title">${S.artistsTitle}</h1>
+    <p class="page-lead">${S.artistsLead(artists.length)}</p>
 
     <div class="filter-bar">
-      <input type="search" id="qInput" placeholder="アーティスト名・参加ミュージシャン名で検索…" value="${escapeHtml(state.q)}">
+      <input type="search" id="qInput" placeholder="${S.searchPlaceholder}" value="${escapeHtml(state.q)}">
       <select id="sortSelect">
-        <option value="name">名前順</option>
-        <option value="begin">活動開始年順</option>
-        <option value="albums">アルバム数順</option>
+        <option value="name">${S.sortName}</option>
+        <option value="begin">${S.sortBegin}</option>
+        <option value="albums">${S.sortAlbums}</option>
       </select>
     </div>
     <div class="filter-row" id="typeRow"></div>
@@ -36,8 +37,8 @@ export async function renderArtists(view, queryString) {
     <div class="artist-grid" id="results"></div>
 
     <div class="personnel-section" id="personnelSection" hidden>
-      <h2 class="section-title">参加ミュージシャンとして(<span id="personnelCount"></span>件のアルバム)</h2>
-      <p class="section-hint">アーティスト名ではなく、アルバムの参加ミュージシャンのクレジットが検索語と一致しています。</p>
+      <h2 class="section-title" id="personnelHeading"></h2>
+      <p class="section-hint">${S.personnelHint}</p>
       <div class="album-hit-list" id="personnelResults"></div>
     </div>
   `;
@@ -53,12 +54,12 @@ export async function renderArtists(view, queryString) {
   const countEl = view.querySelector("#resultCount");
   const personnelSection = view.querySelector("#personnelSection");
   const personnelResultsEl = view.querySelector("#personnelResults");
-  const personnelCountEl = view.querySelector("#personnelCount");
+  const personnelHeadingEl = view.querySelector("#personnelHeading");
 
-  const TYPES = [["", "すべて"], ["group", "グループ"], ["person", "個人"]];
+  const TYPES = [["", S.typeAll], ["group", S.group], ["person", S.person]];
   const decades = [...new Set(artists.map((a) => a.begin_year && Math.floor(a.begin_year / 10) * 10).filter(Boolean))].sort();
-  const DECADES = [["", "すべての年代"], ...decades.map((d) => [String(d), `${d}年代`])];
-  const GENRES = [["", "すべてのジャンル"], ...genres.categories.map((c) => [c.id, c.label])];
+  const DECADES = [["", S.decadeAll], ...decades.map((d) => [String(d), S.decadeLabel(d)])];
+  const GENRES = [["", S.genreAll], ...genres.categories.map((c) => [c.id, c.label])];
 
   typeRow.innerHTML = TYPES.map(([v, l]) => chipHtml("type", v, l, state.type)).join("");
   decadeRow.innerHTML = DECADES.map(([v, l]) => chipHtml("decade", v, l, state.decade)).join("");
@@ -81,9 +82,9 @@ export async function renderArtists(view, queryString) {
       <a class="album-row personnel-hit" href="#/artist/${encodeURIComponent(artist.slug)}">
         ${artwork}
         <div class="album-info">
-          <span class="hit-badge">参加</span>
+          <span class="hit-badge">${S.featuredBadge}</span>
           <span class="album-title">${escapeHtml(album.title)}</span>
-          <span class="album-year">${album.year ?? "年不明"}</span>
+          <span class="album-year">${album.year ?? S.yearUnknown}</span>
           <div class="album-artist">${escapeHtml(artist.name)}</div>
           <div class="personnel-snippet">${escapeHtml(personnelSnippet(album.personnel, q))}</div>
         </div>
@@ -138,14 +139,14 @@ export async function renderArtists(view, queryString) {
     }
     albumHits.sort((a, b) => a.artist.name.localeCompare(b.artist.name) || (a.album.year ?? 9999) - (b.album.year ?? 9999));
 
-    countEl.textContent = `${nameMatches.length}件ヒット`;
+    countEl.textContent = S.hitsCount(nameMatches.length);
     resultsEl.innerHTML = nameMatches.length
       ? nameMatches.map((a) => artistCardHtml(a)).join("")
-      : `<p class="empty-hint">該当するアーティストが見つかりませんでした。</p>`;
+      : `<p class="empty-hint">${S.noResults}</p>`;
 
     personnelSection.hidden = albumHits.length === 0;
     if (albumHits.length) {
-      personnelCountEl.textContent = albumHits.length;
+      personnelHeadingEl.textContent = S.personnelHeading(albumHits.length);
       personnelResultsEl.innerHTML = albumHits
         .map(({ artist, album }) => albumHitHtml(artist, album, state.q.toLowerCase()))
         .join("");

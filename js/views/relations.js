@@ -2,6 +2,8 @@
 
 import { loadData } from "../data.js";
 import { escapeHtml } from "../router.js";
+import { ROOT } from "../i18n.js";
+import { S } from "../strings.js";
 
 let d3ScriptPromise = null;
 function ensureD3() {
@@ -9,7 +11,7 @@ function ensureD3() {
   if (!d3ScriptPromise) {
     d3ScriptPromise = new Promise((resolve, reject) => {
       const s = document.createElement("script");
-      s.src = "js/vendor/d3.v7.min.js";
+      s.src = `${ROOT}js/vendor/d3.v7.min.js`;
       s.onload = resolve;
       s.onerror = reject;
       document.head.appendChild(s);
@@ -19,19 +21,19 @@ function ensureD3() {
 }
 
 export async function renderRelations(view) {
-  view.innerHTML = `<div class="loading">読み込み中…</div>`;
+  view.innerHTML = `<div class="loading">${S.loading}</div>`;
   const [{ relations, artists }] = await Promise.all([loadData(), ensureD3()]);
 
   const artistByName = new Map(artists.map((a) => [a.name, a]));
 
   view.innerHTML = `
-    <h1 class="page-title">メンバー相関図</h1>
-    <p class="page-lead">主要アーティスト・ミュージシャン間のつながりです。ノードをドラッグで動かせます。データに含まれるアーティストはタップで詳細ページへ移動します。</p>
+    <h1 class="page-title">${S.relationsTitle}</h1>
+    <p class="page-lead">${S.relationsLead}</p>
     <div class="relations-wrap">
       <svg id="relSvg"></svg>
       <div class="rel-legend">
-        <span><span class="dot group"></span>グループ</span>
-        <span><span class="dot person"></span>個人</span>
+        <span><span class="dot group"></span>${S.group}</span>
+        <span><span class="dot person"></span>${S.person}</span>
       </div>
     </div>
   `;
