@@ -385,6 +385,17 @@ a.album-row.personnel-hit:hover {
   color: var(--text-dim);
 }
 .album-links a:hover { color: var(--text); border-color: var(--accent); text-decoration: none; }
+.pr-label {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
 .tracklist {
   margin-top: 6px;
   width: 100%;
