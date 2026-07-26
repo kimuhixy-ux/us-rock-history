@@ -11,6 +11,7 @@ import { renderGlossary } from "./views/glossary.js";
 import { renderFavorites } from "./views/favorites.js";
 import { renderStats } from "./views/stats.js";
 import { renderDonateLink } from "./donate.js";
+import { initAds } from "./ads.js";
 import { ROOT } from "./i18n.js";
 
 addRoute(/^#\/timeline$/, renderTimeline);
@@ -26,6 +27,7 @@ addRoute(/^#\/?$/, renderTimeline);
 
 startRouter();
 renderDonateLink();
+initAds();
 
 // モバイル用ナビの開閉
 const navToggle = document.getElementById("navToggle");
