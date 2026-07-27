@@ -1,6 +1,6 @@
 // sw.js: オフライン閲覧のためのService Worker
 // バージョンを上げると古いキャッシュが破棄され、新しいファイルに置き換わります。
-const CACHE_VERSION = "us-rock-history-v14-cmp";
+const CACHE_VERSION = "us-rock-history-v15-pseo";
 
 const PRECACHE_URLS = [
   "./",
@@ -83,6 +83,11 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
   if (new URL(request.url).origin !== location.origin) return; // Spotify等の外部リンクは対象外
 
+  if (request.mode === "navigate") {
+    event.respondWith(networkFirst(request));
+    return;
+  }
+
   event.respondWith(
     caches.match(request).then((cached) => {
       if (cached) return cached;
@@ -99,3 +104,14 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
+async function networkFirst(request) {
+  const cache = await caches.open(CACHE_VERSION);
+  try {
+    const response = await fetch(request);
+    if (response.ok && !response.redirected) cache.put(request, response.clone());
+    return response;
+  } catch (e) {
+    return (await cache.match(request)) || Response.error();
+  }
+}

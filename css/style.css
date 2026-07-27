@@ -520,3 +520,26 @@ a.album-row.personnel-hit:hover {
 
 /* ===== お気に入り ===== */
 .empty-hint { color: var(--text-dim); font-size: 14px; }
+
+/* ===== 静的名盤索引・詳細ページ ===== */
+.pseo-body { min-height: 100vh; }
+.pseo-header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 18px; background: rgba(16, 14, 12, 0.94); border-bottom: 1px solid var(--border); }
+.pseo-header nav { color: var(--text-dim); font-size: 13px; }
+.pseo-main { max-width: 760px; min-height: 70vh; margin: 0 auto; padding: 28px 16px 48px; }
+.pseo-main a { color: var(--accent); }
+.pseo-breadcrumb { color: var(--text-dim); font-size: 12px; margin-bottom: 22px; }
+.pseo-kicker { color: var(--accent); font-size: 13px; margin: 0 0 6px; }
+.pseo-artist { color: var(--text-dim); font-size: 15px; margin: 4px 0 0; }
+.pseo-facts { margin: 24px 0; border-top: 1px solid var(--border); }
+.pseo-facts div { display: grid; grid-template-columns: minmax(110px, 28%) 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--border); }
+.pseo-facts dt { color: var(--text-dim); font-size: 13px; }
+.pseo-facts dd { margin: 0; line-height: 1.6; }
+.pseo-source-note { color: var(--text-dim); font-size: 13px; line-height: 1.7; }
+.pseo-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.pseo-actions > a:not(.btn) { padding: 8px 10px; }
+.pseo-related, .pseo-index-group { margin-top: 32px; }
+.pseo-related h2, .pseo-index-group h2 { font-size: 17px; color: var(--accent); }
+.pseo-related ul, .pseo-index-group ul { list-style: none; margin: 0; padding: 0; }
+.pseo-related li, .pseo-index-group li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.pseo-related li span, .pseo-index-group li span { flex: none; color: var(--text-dim); font-size: 12px; text-align: right; }
+@media (max-width: 540px) { .pseo-related li, .pseo-index-group li { display: block; } .pseo-related li span, .pseo-index-group li span { display: block; margin-top: 3px; text-align: left; } }

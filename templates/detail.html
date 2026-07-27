@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="$lang">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$page_title</title>
+<meta name="description" content="$meta_description">
+<meta name="theme-color" content="#111318">
+<link rel="canonical" href="$canonical">
+<link rel="alternate" hreflang="ja" href="$ja_url">
+<link rel="alternate" hreflang="en" href="$en_url">
+<link rel="alternate" hreflang="x-default" href="$ja_url">
+<meta property="og:type" content="music.album">
+<meta property="og:site_name" content="US Rock History">
+<meta property="og:title" content="$title">
+<meta property="og:description" content="$meta_description">
+<meta property="og:url" content="$canonical">
+<meta property="og:image" content="$og_image">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="$title">
+<meta name="twitter:description" content="$meta_description">
+<meta name="twitter:image" content="$og_image">
+<link rel="apple-touch-icon" href="${root}icons/icon-192.png">
+<link rel="stylesheet" href="${root}css/style.css">
+<script type="application/ld+json">$json_ld</script>
+</head>
+<body class="pseo-body">
+<header class="pseo-header"><a class="brand" href="$home_url">US ROCK HISTORY</a><nav><a href="$index_url">$index_label</a> · <a href="$other_url">$other_label</a></nav></header>
+<main class="pseo-main">
+  <nav class="pseo-breadcrumb" aria-label="$breadcrumb_label"><a href="$home_url">$home_label</a> › <a href="$index_url">$index_label</a> › <span>$title</span></nav>
+  <article>
+    <p class="pseo-kicker">$genre</p>
+    <h1 class="page-title">$title</h1>
+    <p class="pseo-artist">$artist</p>
+    <dl class="pseo-facts">$facts</dl>
+    <p class="pseo-source-note">$source_note</p>
+    <div class="pseo-actions"><a class="btn primary" href="$app_url">$app_label</a><a href="$spotify_url" target="_blank" rel="noopener noreferrer">Spotify</a><a href="$apple_url" target="_blank" rel="noopener noreferrer">Apple Music</a></div>
+  </article>
+  <aside class="pseo-related"><h2>$related_label</h2><ul>$related</ul></aside>
+</main>
+<footer class="app-footer"><p>$data_note</p><p class="footer-links"><a href="$about_url">$about_label</a> · <a href="$privacy_url">$privacy_label</a> · <a href="$index_url">$index_label</a></p></footer>
+<script type="module">import { initAds } from "${root}js/ads.js"; initAds();</script>
+</body>
+</html>
