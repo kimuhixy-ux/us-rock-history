@@ -60,6 +60,13 @@ img, svg { max-width: 100%; }
 }
 .brand:hover { text-decoration: none; color: var(--accent); }
 
+.header-right { display: flex; align-items: center; gap: 8px; }
+.lang-switch {
+  flex: none; font-size: 12px; color: var(--text-dim); text-decoration: none;
+  border: 1px solid var(--border); border-radius: 999px; padding: 5px 12px; white-space: nowrap;
+}
+.lang-switch:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
 .nav-toggle {
   display: none;
   flex-direction: column;
