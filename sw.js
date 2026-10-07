@@ -1,6 +1,6 @@
 // sw.js: オフライン閲覧のためのService Worker
 // バージョンを上げると古いキャッシュが破棄され、新しいファイルに置き換わります。
-const CACHE_VERSION = "us-rock-history-v15-pseo";
+const CACHE_VERSION = "us-rock-history-v16-pseo";
 
 const PRECACHE_URLS = [
   "./",
@@ -51,7 +51,9 @@ async function precache(cache, urls) {
   await Promise.all(
     urls.map(async (url) => {
       try {
-        const response = await fetch(url);
+        // cache: "reload" でブラウザのHTTPキャッシュ(GitHub Pagesは10分有効)を飛ばす。
+        // 経由すると新しい版のキャッシュに古いJSが入り、cache-firstで出続けてしまうため
+        const response = await fetch(url, { cache: "reload" });
         if (response.ok && !response.redirected) {
           await cache.put(url, response);
         }
